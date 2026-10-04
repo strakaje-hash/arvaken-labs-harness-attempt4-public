@@ -1,0 +1,36 @@
+# OpenTelemetry Collector for the pod (Task 1.1 / 4.1). No sampling anywhere: every span the SDKs export is
+# kept. Traces go to the local file store (the trace archive) and to Tempo on the same host.
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 127.0.0.1:4318
+      grpc:
+        endpoint: 127.0.0.1:4317
+processors:
+  batch:
+    timeout: 200ms
+    send_batch_size: 512
+exporters:
+  file:
+    path: /root/runs/otel-spans.jsonl
+    format: json
+  otlp/tempo:
+    endpoint: 127.0.0.1:4417
+    tls:
+      insecure: true
+    retry_on_failure:
+      enabled: true
+service:
+  telemetry:
+    logs:
+      level: warn
+    # the collector's own Prometheus endpoint defaults to 127.0.0.1:8888, which Runpod's Jupyter already holds
+    # (collector died on the H100 pod, 2026-09-12); the collector's self-metrics are not part of any measurement
+    metrics:
+      level: none
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [file, otlp/tempo]

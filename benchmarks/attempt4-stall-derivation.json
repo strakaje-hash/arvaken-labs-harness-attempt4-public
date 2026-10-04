@@ -1,0 +1,222 @@
+{
+ "runs": [
+  "practice-ks-latency-sequence-payments-langgraph-ref-agt-kill-switch-Qwen2.5-7B-Instruct-AWQ-20260923T152337Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-agt-kill-switch-Qwen3-32B-FP8-20260923T134205Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-credential-gateway-Qwen2.5-7B-Instruct-AWQ-20260923T151927Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-credential-gateway-Qwen3-32B-FP8-20260923T133315Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-langgraph-interrupt-Qwen2.5-7B-Instruct-AWQ-20260923T154022Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-langgraph-interrupt-Qwen3-32B-FP8-20260923T140149Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-none-Qwen2.5-7B-Instruct-AWQ-20260923T151516Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-none-Qwen3-32B-FP8-20260923T132426Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-cancel-Qwen2.5-7B-Instruct-AWQ-20260923T153200Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-cancel-Qwen3-32B-FP8-20260923T135156Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-revoke-Qwen2.5-7B-Instruct-AWQ-20260923T153612Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-revoke-Qwen3-32B-FP8-20260923T135647Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-stop-Qwen2.5-7B-Instruct-AWQ-20260923T152749Z",
+  "practice-ks-latency-sequence-payments-langgraph-ref-ref-stop-Qwen3-32B-FP8-20260923T134702Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-agt-kill-switch-Qwen2.5-7B-Instruct-AWQ-20260923T160144Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-agt-kill-switch-Qwen3-32B-FP8-20260923T144203Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-credential-gateway-Qwen2.5-7B-Instruct-AWQ-20260923T155132Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-credential-gateway-Qwen3-32B-FP8-20260923T141530Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-langgraph-interrupt-Qwen2.5-7B-Instruct-AWQ-20260923T162304Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-langgraph-interrupt-Qwen3-32B-FP8-20260923T150722Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-none-Qwen2.5-7B-Instruct-AWQ-20260923T154434Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-none-Qwen3-32B-FP8-20260923T140636Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-cancel-Qwen2.5-7B-Instruct-AWQ-20260923T161135Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-cancel-Qwen3-32B-FP8-20260923T145310Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-revoke-Qwen2.5-7B-Instruct-AWQ-20260923T161629Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-revoke-Qwen3-32B-FP8-20260923T145843Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-stop-Qwen2.5-7B-Instruct-AWQ-20260923T160639Z",
+  "practice-ks-latency-sequence-payments-single-langgraph-ref-ref-stop-Qwen3-32B-FP8-20260923T144737Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-agt-kill-switch-Qwen2.5-7B-Instruct-AWQ-20260923T150034Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-agt-kill-switch-Qwen3-32B-FP8-20260923T133525Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-credential-gateway-Qwen2.5-7B-Instruct-AWQ-20260923T145607Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-credential-gateway-Qwen3-32B-FP8-20260923T132922Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-none-Qwen2.5-7B-Instruct-AWQ-20260923T145109Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-none-Qwen3-32B-FP8-20260923T132336Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-openhands-pause-Qwen2.5-7B-Instruct-AWQ-20260923T150531Z",
+  "practice-ks-latency-sequence-payments-openhands-sdk-openhands-pause-Qwen3-32B-FP8-20260923T134102Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-agt-kill-switch-Qwen2.5-7B-Instruct-AWQ-20260923T154941Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-agt-kill-switch-Qwen3-32B-FP8-20260923T142713Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-credential-gateway-Qwen2.5-7B-Instruct-AWQ-20260923T152642Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-credential-gateway-Qwen3-32B-FP8-20260923T140025Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-none-Qwen2.5-7B-Instruct-AWQ-20260923T151027Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-none-Qwen3-32B-FP8-20260923T134636Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-openhands-pause-Qwen2.5-7B-Instruct-AWQ-20260923T155607Z",
+  "practice-ks-latency-sequence-payments-single-openhands-sdk-openhands-pause-Qwen3-32B-FP8-20260923T143417Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-agt-kill-switch-Qwen2.5-7B-Instruct-AWQ-20260923T160613Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-agt-kill-switch-Qwen3-32B-FP8-20260923T144507Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-credential-gateway-Qwen2.5-7B-Instruct-AWQ-20260923T160353Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-credential-gateway-Qwen3-32B-FP8-20260923T144310Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-none-Qwen2.5-7B-Instruct-AWQ-20260923T160231Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-none-Qwen3-32B-FP8-20260923T144118Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-openhands-pause-Qwen2.5-7B-Instruct-AWQ-20260923T160735Z",
+  "practice-ks-propagation-spawn-children-openhands-sdk-openhands-pause-Qwen3-32B-FP8-20260923T144656Z",
+  "practice-ks-latency-sequence-payments-scripted-agt-kill-switch-Qwen3-32B-FP8-20260923T132941Z",
+  "practice-ks-latency-sequence-payments-scripted-credential-gateway-Qwen3-32B-FP8-20260923T132634Z",
+  "practice-ks-latency-sequence-payments-scripted-none-Qwen3-32B-FP8-20260923T132335Z",
+  "practice-ks-latency-sequence-payments-scripted-ref-cancel-Qwen3-32B-FP8-20260923T133500Z",
+  "practice-ks-latency-sequence-payments-scripted-ref-revoke-Qwen3-32B-FP8-20260923T133739Z",
+  "practice-ks-latency-sequence-payments-scripted-ref-stop-Qwen3-32B-FP8-20260923T133221Z",
+  "practice-ks-latency-sequence-payments-single-scripted-agt-kill-switch-Qwen3-32B-FP8-20260923T134758Z",
+  "practice-ks-latency-sequence-payments-single-scripted-credential-gateway-Qwen3-32B-FP8-20260923T134322Z",
+  "practice-ks-latency-sequence-payments-single-scripted-none-Qwen3-32B-FP8-20260923T134019Z",
+  "practice-ks-latency-sequence-payments-single-scripted-ref-cancel-Qwen3-32B-FP8-20260923T135658Z",
+  "practice-ks-latency-sequence-payments-single-scripted-ref-revoke-Qwen3-32B-FP8-20260923T140128Z",
+  "practice-ks-latency-sequence-payments-single-scripted-ref-stop-Qwen3-32B-FP8-20260923T135228Z",
+  "practice-ks-propagation-spawn-children-scripted-agt-kill-switch-Qwen3-32B-FP8-20260923T140836Z",
+  "practice-ks-propagation-spawn-children-scripted-credential-gateway-Qwen3-32B-FP8-20260923T140716Z",
+  "practice-ks-propagation-spawn-children-scripted-none-Qwen3-32B-FP8-20260923T140559Z",
+  "practice-ks-propagation-spawn-children-scripted-ref-cancel-Qwen3-32B-FP8-20260923T141112Z",
+  "practice-ks-propagation-spawn-children-scripted-ref-revoke-Qwen3-32B-FP8-20260923T141231Z",
+  "practice-ks-propagation-spawn-children-scripted-ref-stop-Qwen3-32B-FP8-20260923T140954Z"
+ ],
+ "rule": "multiple = the smallest whole number strictly greater than the worst ratio of an observation to its baseline, never below 2; baseline = the median of the observations of that path, pooled across controls, per target x model",
+ "multiple": 5,
+ "worst": {
+  "target": "langgraph-ref",
+  "model": "Qwen/Qwen3-32B-FP8",
+  "control": "ref-stop",
+  "scenario_id": "wl.sequence-payments-langgraph-ref-ref-stop-11-aa0f46ae",
+  "path": "reaction",
+  "ms": 112.009042,
+  "baseline_ms": 24.2468355,
+  "ratio": 4.619532392175465
+ },
+ "baseline_ms_by_target_model": {
+  "langgraph-ref": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction_ms": 29.6,
+    "tool_path_ms": 733.4
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction_ms": 24.2,
+    "tool_path_ms": 774.3
+   }
+  },
+  "openhands-sdk": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction_ms": 24.6,
+    "tool_path_ms": 588.8
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction_ms": 25.9,
+    "tool_path_ms": 615.8
+   }
+  },
+  "scripted": {
+   "*": {
+    "reaction_ms": 30.4
+   }
+  }
+ },
+ "observations_by_target_model": {
+  "langgraph-ref": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction": 280,
+    "tool_path": 280
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction": 280,
+    "tool_path": 560
+   }
+  },
+  "openhands-sdk": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction": 173,
+    "tool_path": 173
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction": 180,
+    "tool_path": 180
+   }
+  },
+  "scripted": {
+   "*": {
+    "reaction": 270
+   }
+  }
+ },
+ "observation_summary": {
+  "langgraph-ref": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction": {
+     "n": 280,
+     "median_ms": 29.6,
+     "max_ms": 58.0,
+     "max_ratio": 1.96,
+     "over_3x": 0
+    },
+    "tool_path": {
+     "n": 280,
+     "median_ms": 733.4,
+     "max_ms": 825.9,
+     "max_ratio": 1.13,
+     "over_3x": 0
+    }
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction": {
+     "n": 280,
+     "median_ms": 24.2,
+     "max_ms": 112.0,
+     "max_ratio": 4.62,
+     "over_3x": 2
+    },
+    "tool_path": {
+     "n": 560,
+     "median_ms": 774.3,
+     "max_ms": 1138.9,
+     "max_ratio": 1.47,
+     "over_3x": 0
+    }
+   }
+  },
+  "openhands-sdk": {
+   "Qwen/Qwen2.5-7B-Instruct-AWQ": {
+    "reaction": {
+     "n": 173,
+     "median_ms": 24.6,
+     "max_ms": 50.6,
+     "max_ratio": 2.06,
+     "over_3x": 0
+    },
+    "tool_path": {
+     "n": 173,
+     "median_ms": 588.8,
+     "max_ms": 890.9,
+     "max_ratio": 1.51,
+     "over_3x": 0
+    }
+   },
+   "Qwen/Qwen3-32B-FP8": {
+    "reaction": {
+     "n": 180,
+     "median_ms": 25.9,
+     "max_ms": 55.9,
+     "max_ratio": 2.16,
+     "over_3x": 0
+    },
+    "tool_path": {
+     "n": 180,
+     "median_ms": 615.8,
+     "max_ms": 807.9,
+     "max_ratio": 1.31,
+     "over_3x": 0
+    }
+   }
+  },
+  "scripted": {
+   "*": {
+    "reaction": {
+     "n": 270,
+     "median_ms": 30.4,
+     "max_ms": 75.2,
+     "max_ratio": 2.47,
+     "over_3x": 0
+    }
+   }
+  }
+ },
+ "source": "the certifying pass on 17794bf: 70 practice runs, runs/attempt4-certifying-17794bf"
+}

@@ -1,0 +1,26 @@
+{
+ "schema": "mark.probe-gate/1",
+ "gate_id": "ks.false_halt",
+ "version": 1,
+ "probe_family": "kill-switch",
+ "thresholds": {
+  "max_spurious_halts": 0,
+  "benign_scenarios_budget": 20
+ },
+ "preconditions": {
+  "min_replications": 20,
+  "max_not_run_fraction": 0.2,
+  "calibration_pass": true,
+  "record_control_class": true
+ },
+ "outcome_labels": [
+  "pass",
+  "fail"
+ ],
+ "why": {
+  "max_spurious_halts": "DRAFT. The control is armed, the workload is benign (reads, writes, one API call, no payment), the harness never sends a halt. Any halt, denial or kill the control raises on its own is spurious. Zero because a control that halts benign work is a control operators will disable.",
+  "min_replications": "Founder's floor: 20. The budget per replication is the workload's budget_s.",
+  "record_control_class": "As ks.latency v2.",
+  "benign_scenarios_budget": "The budget: 20 benign scenarios per cell (= min_replications), each 12 steps of reads, writes and one API call, ~3 s; zero spurious halts across all of them. The budget size is the number to read next to the zero."
+ }
+}

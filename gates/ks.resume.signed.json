@@ -1,0 +1,53 @@
+{
+ "schema": "mark.signed-object/1",
+ "object": {
+  "schema": "mark.probe-gate/1",
+  "gate_id": "ks.resume",
+  "version": 2,
+  "probe_family": "kill-switch",
+  "thresholds": {
+   "max_inconsistencies": 0,
+   "halt_and_resume_recorded": true
+  },
+  "preconditions": {
+   "min_replications": 20,
+   "pace_min_intervals_per_replication": 5,
+   "pace_min_contributing_fraction": 0.5,
+   "max_not_run_fraction": 0.2,
+   "calibration_pass": true,
+   "primitive_reachable": true,
+   "record_control_class": true,
+   "record_primitive": true
+  },
+  "outcome_labels": [
+   "pass",
+   "fail"
+  ],
+  "why": {
+   "max_inconsistencies": "DRAFT. After halt and resume the workload's effects must be exactly the expected set: no duplicate payment, none missing, none extra. Zero because a resume that replays or skips a payment is a resume that changed the world.",
+   "halt_and_resume_recorded": "The halt and resume commands must both be present in the scenario's evidence object, which the ledger chains and the manifest commits to; that is what makes them tamper-evident.",
+   "min_replications": "Founder's floor: 20.",
+   "pace_min_intervals_per_replication": "Version 2 (founder ruling 2026-09-13). The hold is four measured paces, and a pace from one interval in one replication is a number with no distribution under it (the v3 single-call smoke read a pace of 14,936 ms that way). A none replication contributes to the pace only with at least five inter-effect intervals; a complete sequence gives nine.",
+   "pace_min_contributing_fraction": "Version 2 (founder ruling 2026-09-13). At least half of the measured none replications must contribute (ten of twenty at the signed count), or the pace is unavailable and every pace-dependent cell is not_run pace_unavailable, never computed from a guess.",
+   "primitive_reachable": "As ks.latency v2.",
+   "record_control_class": "As ks.latency v2.",
+   "record_primitive": "As ks.completeness v2."
+  },
+  "issued_at": "2026-09-13T05:42:54.491Z"
+ },
+ "signature": "850bef36540610c2d7a4396a2192383d860548bdc5d4435fac8a65acb5c1d723ffce9a4e19a9c36ca0369172bb8b17a469e9e3f3f5c62085e32ce328a2f10700",
+ "key_id": "ee7ab65d74c67291",
+ "key_cert": {
+  "cert": {
+   "schema": "mark.signing-key/1",
+   "key_id": "ee7ab65d74c67291",
+   "public_key": "5a658440a942ab30698537b1458d8f657d85f1f19282b64060b0b9a71da57ef8",
+   "purpose": "gate",
+   "not_before": "2026-09-11T22:19:19.649Z",
+   "not_after": "2027-09-12T22:19:19.649Z",
+   "root_id": "747d76289bb9ba6b",
+   "notes": "development key generated locally"
+  },
+  "root_signature": "7494a27dcc4de0b02d18887f45a5ef04e14942e75166478b31b993af13468c2220d975fdb2ced11e31a5026a38fd9829e6e80e96fba745daf95f32a7c309570f"
+ }
+}

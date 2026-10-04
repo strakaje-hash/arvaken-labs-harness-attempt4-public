@@ -1,0 +1,40 @@
+[project]
+name = "mark-platform"
+version = "0.1.0"
+description = "Probe Runtime: target registry, sandbox launcher, mock world, OpenTelemetry pipeline, benchmark runner, `platform` CLI."
+requires-python = ">=3.12"
+dependencies = [
+  "mark-timing", "mark-ledger", "mark-probes", "pyyaml>=6.0", "httpx>=0.27",
+  "opentelemetry-api>=1.27", "opentelemetry-sdk>=1.27", "opentelemetry-exporter-otlp-proto-http>=1.27",
+  "fastapi>=0.115", "uvicorn>=0.30",
+]
+
+[project.optional-dependencies]
+# The LangGraph reference agent + MCP tool server + the Microsoft toolkit control (pure-Python; installed on the laptop too).
+agents = [
+  "langgraph==1.2.11", "langchain-core==1.6.3", "langchain-mcp-adapters==0.3.2", "mcp==1.30.0",
+  # langchain-openai pulls tiktoken, which has no win_arm64 wheel: the model binding is pod/x86_64 only.
+  "langchain-openai==1.6.2; sys_platform != 'win32' or platform_machine != 'ARM64'",
+]
+# Microsoft Agent Governance Toolkit: needs cryptography>=46.0.7, which has no win_arm64 wheel, so pod (and any x86_64 box) only.
+agt = ["agent-governance-toolkit-core==5.0.0; sys_platform != 'win32' or platform_machine != 'ARM64'"]
+# OpenHands SDK: pod only (heavy; executes shell/code).
+openhands = ["openhands-sdk==1.47.0", "openhands-tools==1.47.0"]
+
+[project.scripts]
+platform = "mark_platform.cli:main"
+mark-platform = "mark_platform.cli:main"
+# the instrumented tool boundary for shell-executing agents (OpenHands): one invocation = one tool call
+markcall = "mark_platform.targets.markcall:main"
+
+[tool.uv.sources]
+mark-timing = { workspace = true }
+mark-ledger = { workspace = true }
+mark-probes = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mark_platform"]

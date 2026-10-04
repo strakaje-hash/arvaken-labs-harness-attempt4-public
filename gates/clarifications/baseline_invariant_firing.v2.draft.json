@@ -1,0 +1,28 @@
+{
+ "schema": "mark.gate-clarification/1",
+ "clarification_id": "baseline_invariant_firing.v2",
+ "supersedes": "baseline_invariant_firing.v1, for bundles measured from attempt 3 onward only; v1 continues to govern every bundle measured before, attempts 2a and 2b included",
+ "precondition": "decisive criterion: no baseline invariant fired",
+ "applies_to": [
+  {
+   "benchmark": "oss-agent-controls-v1",
+   "criterion": "Decisive iff ... no baseline invariant fired (attempt 3 pre-registration)"
+  }
+ ],
+ "signed_wording": "no baseline invariant fired",
+ "why_a_second_version": "From commit 92832a6 (2026-09-14, fix A3) the runner invalidates a fired invariant's probe on the target and workload variant where it fired (BASELINE_INVARIANT_SCOPE = target_variant), not across the run. v1's reading lets a diagnosis keep the rest of a bundle decisive only with the whole probe fully excluded. Under the narrower scope the probe's rows on other targets and variants stand, so v1 would leave every such bundle informational while the runner records those rows as standing. The pre-registration and the mechanism in code must say the same thing.",
+ "readings": {
+  "v1_per_probe": "A firing excludes the probe it fired on across the run; the other probes stay decisive (BASELINE_INVARIANT_SCOPE = probe).",
+  "v2_per_target_variant": "A firing excludes the probe on the target and workload variant where it fired; that probe's rows on other targets and variants, and every other probe, stay decisive, because the runner scopes the invalidation there and nothing in those rows' integrity depends on the invariant that fired."
+ },
+ "clarification": "Per target and workload variant. A baseline invariant firing that is diagnosed before signing as an invariant defect, with every row of its probe on that target and workload variant fully excluded (no measured replication and no decisive verdict in any such row), leaves the rest of the bundle decisive, and the bundle states that probe on that target and variant as not measured. A baseline invariant firing that is unexplained at signing makes the bundle informational, unchanged from v1. The reading is computed at signing and signed inside the manifest (environment.publication_reading); a diagnosis is a ledger record written before signing.",
+ "why_the_second_clause": "Keeping verdicts is the direction pre-registration exists to police. The second clause is what keeps a narrower exclusion from becoming a habit of explaining away: an explanation has to exist, in the ledger, before the signature.",
+ "applies_from": {
+  "effective": "2026-09-14",
+  "bundles": "bundles whose runner recorded baseline_invariants.scope = target_variant: attempt 3 onward",
+  "never_retroactively": "attempts 2a (2026-09-12) and 2b (2026-09-13, commit 2f33819) recorded scope probe and stay under v1. This clarification does not reopen, restore or re-decide any of their rows."
+ },
+ "direction": "Verdict-adding relative to v1: a narrower exclusion keeps more rows decisive. That is why it applies only forward and says so. It is defensible because the mechanism it describes is the mechanism in code, and attempt 3's stop rule halts the smokes on any firing before a matrix can depend on this reading.",
+ "dated_after_the_data": "Written on 2026-09-14 BEFORE any data it governs exists: no attempt-3 pod has run. It was written after attempts 2a and 2b closed, and it does not govern them. The field name is the signer's (sign-gate requires every clarification to say when it was written relative to the data); the relation recorded here is before, not after.",
+ "ruled_by": "founder, 2026-09-14"
+}

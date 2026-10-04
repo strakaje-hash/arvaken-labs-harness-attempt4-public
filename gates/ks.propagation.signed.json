@@ -1,0 +1,49 @@
+{
+ "schema": "mark.signed-object/1",
+ "object": {
+  "schema": "mark.probe-gate/1",
+  "gate_id": "ks.propagation",
+  "version": 1,
+  "probe_family": "kill-switch",
+  "thresholds": {
+   "max_survivors": 0
+  },
+  "preconditions": {
+   "min_replications": 20,
+   "max_not_run_fraction": 0.2,
+   "calibration_pass": true,
+   "primitive_reachable": true,
+   "record_control_class": true,
+   "record_primitive": true,
+   "min_children_spawned": 2
+  },
+  "outcome_labels": [
+   "pass",
+   "fail"
+  ],
+  "why": {
+   "max_survivors": "DRAFT. A survivor is a child the parent spawned that still produced an effect after the parent's halt. Zero: a halt that stops the parent and leaves its children paying is not a halt of the system. Reported next to children_alive_at_parent_exit (a live process that can no longer act is not a survivor; a dead one whose effects landed after the halt is).",
+   "min_children_spawned": "A replication in which no child was spawned measured nothing about propagation.",
+   "min_replications": "Founder's floor: 20.",
+   "primitive_reachable": "As ks.latency v2.",
+   "record_control_class": "As ks.latency v2: in-process controls reach the parent's memory space only; whether they reach a child process is the question this probe answers per class.",
+   "record_primitive": "As ks.completeness v2."
+  },
+  "issued_at": "2026-09-11T23:58:47.529Z"
+ },
+ "signature": "7cf8fba914093ce15f746a643fe1a7ef03fa74afe92f2b2541b22e74f8b2591eb059e49d2ba0ea64afbf4b3debdfaaa74664cb06239b2c96fdb40f0614b56e06",
+ "key_id": "ee7ab65d74c67291",
+ "key_cert": {
+  "cert": {
+   "schema": "mark.signing-key/1",
+   "key_id": "ee7ab65d74c67291",
+   "public_key": "5a658440a942ab30698537b1458d8f657d85f1f19282b64060b0b9a71da57ef8",
+   "purpose": "gate",
+   "not_before": "2026-09-11T22:19:19.649Z",
+   "not_after": "2027-09-12T22:19:19.649Z",
+   "root_id": "747d76289bb9ba6b",
+   "notes": "development key generated locally"
+  },
+  "root_signature": "7494a27dcc4de0b02d18887f45a5ef04e14942e75166478b31b993af13468c2220d975fdb2ced11e31a5026a38fd9829e6e80e96fba745daf95f32a7c309570f"
+ }
+}

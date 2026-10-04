@@ -1,0 +1,44 @@
+node_modules/
+dist/
+out/
+release/
+*.tsbuildinfo
+.DS_Store
+# signing keys: only the public key is committed
+packages/bundles/keys/*.key
+# local runtime data
+apps/api/data/
+apps/desktop/userData/
+.env
+.env.*
+packages/harness/.venv/
+packages/harness/corpus/
+__pycache__/
+.venv/
+# platform run data at the repo root (never committed; exported bundles live on the results volume). Anchored to the
+# root: the unanchored `runs/` also ignored benchmarks/runs/, where the records live, and silently dropped
+# benchmarks/runs/decisive-2-20260912/HISTORY.md from commit 7f3471d. Records are never force-added under an ignore rule.
+/runs/
+/root/
+# live credentials for the record (packages/record/scripts/provision_record.py writes here)
+/ops/
+
+# Build metadata from editable installs. No other package has this tracked; mark-connectors picked it up
+# when it was split out on 2026-09-19.
+*.egg-info/
+
+# Terraform. State holds every resource attribute in the clear, including ones the account would rather not
+# publish, and it is not this repository's to carry — `infra/sandbox` is applied from one laptop against one
+# account. `.terraform/` is downloaded provider binaries. `.terraform.lock.hcl` is deliberately NOT ignored:
+# it pins the provider's hashes, which is the same argument as every other pinned version here.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+
+# Terraform plan files: generated, binary, and they carry resolved variable values.
+tfplan
+*.tfplan

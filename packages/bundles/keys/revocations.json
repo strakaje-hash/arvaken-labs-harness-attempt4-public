@@ -1,0 +1,10 @@
+{
+  "list": {
+    "schema": "mark.revocations/1",
+    "issued_at": "2026-09-11T23:58:35.627Z",
+    "not_after": "2026-12-10T23:58:35.627Z",
+    "root_id": "747d76289bb9ba6b",
+    "revoked": []
+  },
+  "root_signature": "c85358452a17a57657ec3db19b40dcd94bba805b34e66a0e445e7c8927fa4d0206083dbe9cc9c16c0c7f28600f49d7ce79a7ab03b783f97f87649f2f88c71805"
+}

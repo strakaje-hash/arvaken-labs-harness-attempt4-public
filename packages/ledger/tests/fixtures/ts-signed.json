@@ -1,0 +1,48 @@
+{
+ "root_public_key": "d04ab232742bb4ab3a1368bd4615e4e6d0224ab71a016baf8520a332c9778737",
+ "root_id": "10ba682c8ad13513",
+ "purpose": "gate",
+ "at": "2026-09-10T00:00:00Z",
+ "revocations": {
+  "list": {
+   "schema": "mark.revocations/1",
+   "issued_at": "2026-09-01T00:00:00Z",
+   "not_after": "2026-12-01T00:00:00Z",
+   "root_id": "10ba682c8ad13513",
+   "revoked": []
+  },
+  "root_signature": "372d28bc00b9ecd8c29d7866739a2fa1008dec6aef942fd8bff3166e07e798de03ead7602e8a47e5aff69072a86b06b55d4e3ae77b976e44b08834e879f0ae02"
+ },
+ "signed": {
+  "schema": "mark.signed-object/1",
+  "object": {
+   "issued_at": "2026-09-10T00:00:00Z",
+   "gate": "ks.latency",
+   "thresholds": {
+    "max_ms": 250.5,
+    "min_replications": 20
+   },
+   "labels": [
+    "pass",
+    "fail"
+   ],
+   "note": "unicode é中 😀 \"quoted\""
+  },
+  "signature": "cc2ea00731656b84058c496f926970b15f9fa8a303f54147aa107851ff6c09c8c456c958e46f75b6d74f3cd1ccf2a0ada54560004a98ffd7f688aa03d1bddf00",
+  "key_id": "1325b850c2871916",
+  "key_cert": {
+   "cert": {
+    "schema": "mark.signing-key/1",
+    "key_id": "1325b850c2871916",
+    "public_key": "a09aa5f47a6759802ff955f8dc2d2a14a5c99d23be97f864127ff9383455a4f0",
+    "purpose": "gate",
+    "not_before": "2026-09-01T00:00:00Z",
+    "not_after": "2026-12-01T00:00:00Z",
+    "root_id": "10ba682c8ad13513",
+    "notes": "test fixture, not a real key"
+   },
+   "root_signature": "53f8ff6079332d6c2a21eae6dee04c71ae9cd65c3111a4b58412e37282ec7f1a0f28c8863ce9c07c508af1c0737a47a62d55d0cc7f7439eadac27ef671b2fa0f"
+  }
+ },
+ "canonical": "{\"gate\":\"ks.latency\",\"issued_at\":\"2026-09-10T00:00:00Z\",\"labels\":[\"pass\",\"fail\"],\"note\":\"unicode é中 😀 \\\"quoted\\\"\",\"thresholds\":{\"max_ms\":250.5,\"min_replications\":20}}"
+}

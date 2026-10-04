@@ -1,0 +1,113 @@
+{
+  "sha": "57f5cc9f4a671fe290783551ba00d57efe2017c9",
+  "node_id": "C_kwDOPjFrItoAKDU3ZjVjYzlmNGE2NzFmZTI5MDc4MzU1MWJhMDBkNTdlZmUyMDE3Yzk",
+  "commit": {
+    "author": {
+      "name": "simonrosenberg",
+      "email": "157206163+simonrosenberg@users.noreply.github.com",
+      "date": "2026-09-11T16:03:54Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T16:03:54Z"
+    },
+    "message": "fix(acp): materialise only the running provider's file secrets (#4927)\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>\nCo-authored-by: allhands-bot <allhands-bot@users.noreply.github.com>",
+    "tree": {
+      "sha": "9c214be7ea97db16723555a48fb4637814a0d336",
+      "url": "https://api.github.com/repos/OpenHands/software-agent-sdk/git/trees/9c214be7ea97db16723555a48fb4637814a0d336"
+    },
+    "url": "https://api.github.com/repos/OpenHands/software-agent-sdk/git/commits/57f5cc9f4a671fe290783551ba00d57efe2017c9",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpCZqCRC1aQ7uu5UhlAAAVoUQAIlV1u/S4rrZPFA/bVT5eo7A\nrJlYqKW0YQggC/jFVdmN2NGao+nZWnMvJ3KV9xNBA5KruinK2F31Ti520OJCTXRY\ntwZIwV+abtHtAtJoM6MVVEvPLuSl3OmqQ99K60tz8N4vr312As82t6DYHs6+D/b4\nZBftP7SSTMlu9/v556xj4gQSSLpZ1N8JX50LcUQWfZkMpMzIK6OoItGI92r/VyLE\nTwBR+6zLJpC07hOUYR6qOw/BWaxkLzW3g5lsiiOsxBNLWAiTTqSK3gp2T3N4m7Pv\nKvGG4i37OaBc+qvMy2PYUgo+2Iut2FebkN6rUz9wJ0OvfaGypIDFuxxyZ00l8IDt\nOFiAaNv165853kuFKpTOQDbI026kfQCJrZ5MXWu+6wxrLlWHbrcj6m4/Z2j96XUy\n3WQX0RdcQP3cCk3pHdkbegh9COBy7z353wZaCl+ZUnN4RZQ6dfPJ5aNRYES+N9wK\np4IJujyKbTdlCMpr2+OgrKokDH6DnubudnPldHcbjJSfmkwHK3Hr/fBI3hJxeiDl\nKlrpUipA/cEwuONLkQh4yBig3wmrkO6oGpjWKvQ6KEmXb8zpNHl1aS5v59I0plHT\n1HaJU9/Ye7ZNnbA6uRU18edTxrGE81QH5NYZFPcXP4G/ZS+11Q2CwERuTHT3mcjk\njjpd0OQ+2A98iVxt3cAx\n=ODyo\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 9c214be7ea97db16723555a48fb4637814a0d336\nparent 9bc73b48bda5d345049e44df0199d04939ac0aba\nauthor simonrosenberg <157206163+simonrosenberg@users.noreply.github.com> 1789142634 +0200\ncommitter GitHub <noreply@github.com> 1789142634 +0200\n\nfix(acp): materialise only the running provider's file secrets (#4927)\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>\nCo-authored-by: allhands-bot <allhands-bot@users.noreply.github.com>",
+      "verified_at": "2026-09-11T16:03:55Z"
+    }
+  },
+  "url": "https://api.github.com/repos/OpenHands/software-agent-sdk/commits/57f5cc9f4a671fe290783551ba00d57efe2017c9",
+  "html_url": "https://github.com/OpenHands/software-agent-sdk/commit/57f5cc9f4a671fe290783551ba00d57efe2017c9",
+  "comments_url": "https://api.github.com/repos/OpenHands/software-agent-sdk/commits/57f5cc9f4a671fe290783551ba00d57efe2017c9/comments",
+  "author": {
+    "login": "simonrosenberg",
+    "id": 157206163,
+    "node_id": "U_kgDOCV7Gkw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/157206163?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/simonrosenberg",
+    "html_url": "https://github.com/simonrosenberg",
+    "followers_url": "https://api.github.com/users/simonrosenberg/followers",
+    "following_url": "https://api.github.com/users/simonrosenberg/following{/other_user}",
+    "gists_url": "https://api.github.com/users/simonrosenberg/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/simonrosenberg/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/simonrosenberg/subscriptions",
+    "organizations_url": "https://api.github.com/users/simonrosenberg/orgs",
+    "repos_url": "https://api.github.com/users/simonrosenberg/repos",
+    "events_url": "https://api.github.com/users/simonrosenberg/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/simonrosenberg/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "9bc73b48bda5d345049e44df0199d04939ac0aba",
+      "url": "https://api.github.com/repos/OpenHands/software-agent-sdk/commits/9bc73b48bda5d345049e44df0199d04939ac0aba",
+      "html_url": "https://github.com/OpenHands/software-agent-sdk/commit/9bc73b48bda5d345049e44df0199d04939ac0aba"
+    }
+  ],
+  "stats": {
+    "total": 209,
+    "additions": 205,
+    "deletions": 4
+  },
+  "files": [
+    {
+      "sha": "72990002a9f856d656a831dbef339db037c903fd",
+      "filename": "openhands-sdk/openhands/sdk/agent/acp_agent.py",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 4,
+      "changes": 44,
+      "blob_url": "https://github.com/OpenHands/software-agent-sdk/blob/57f5cc9f4a671fe290783551ba00d57efe2017c9/openhands-sdk%2Fopenhands%2Fsdk%2Fagent%2Facp_agent.py",
+      "raw_url": "https://github.com/OpenHands/software-agent-sdk/raw/57f5cc9f4a671fe290783551ba00d57efe2017c9/openhands-sdk%2Fopenhands%2Fsdk%2Fagent%2Facp_agent.py",
+      "contents_url": "https://api.github.com/repos/OpenHands/software-agent-sdk/contents/openhands-sdk%2Fopenhands%2Fsdk%2Fagent%2Facp_agent.py?ref=57f5cc9f4a671fe290783551ba00d57efe2017c9",
+      "patch": "@@ -1962,7 +1962,7 @@ def activate_file_credential_binding(\n             self._file_credential_bindings[secret_name] = binding\n \n     def restart_for_updated_credentials(self, secret_names: Collection[str]) -> None:\n-        configured = {spec.secret_name for spec in self.acp_file_secrets}\n+        configured = {spec.secret_name for spec in self._active_file_secrets()}\n         with self._file_credential_lock:\n             self._replace_file_credentials_on_next_materialisation.update(\n                 configured.intersection(secret_names)\n@@ -2457,7 +2457,7 @@ def _present_file_secret_names(self, state: ConversationState) -> set[str]:\n         (their values are file blobs, not env vars the subprocess can reference\n         by name).\n         \"\"\"\n-        configured = {spec.secret_name for spec in self.acp_file_secrets}\n+        configured = {spec.secret_name for spec in self._active_file_secrets()}\n         if not configured:\n             return set()\n         return set(state.secret_registry.secret_sources) & configured\n@@ -2592,6 +2592,42 @@ def _resolved_provider(self) -> ACPProviderInfo | None:\n             self.acp_server or \"\"\n         ) or detect_acp_provider_by_command(self.acp_command)\n \n+    def _active_file_secrets(self) -> list[ACPFileSecretSpec]:\n+        \"\"\"The file-secret specs that apply to the provider this agent runs.\n+\n+        Drops the specs that are *another registered provider's* reserved\n+        credential and keeps everything else, so a harness added upstream cannot\n+        change how this provider's conversation treats a secret carrying the new\n+        reserved name (see #4923). A name several providers share stays: it is\n+        this provider's too.\n+\n+        Deliberately no provenance test. :attr:`acp_file_secrets` defaults to the\n+        union across the registry, but a persisted conversation carries whatever\n+        that union was when it was written, so comparing against today's default\n+        would read an older list as a caller override and silently stop scoping\n+        after an upgrade. Filtering by ownership needs no such distinction, and a\n+        spec for a CLI outside the registry is owned by nobody and always applies.\n+\n+        An unrecognised server keeps every spec, matching\n+        :meth:`_strip_conflicting_env`: without an identity we cannot tell whose\n+        credential a reserved name belongs to.\n+        \"\"\"\n+        provider = self._resolved_provider()\n+        if provider is None:\n+            return list(self.acp_file_secrets)\n+        own = {spec.secret_name for spec in provider.file_secrets}\n+        owned_elsewhere = {\n+            spec.secret_name\n+            for key, info in ACP_PROVIDERS.items()\n+            if key != provider.key\n+            for spec in info.file_secrets\n+        } - own\n+        return [\n+            spec\n+            for spec in self.acp_file_secrets\n+            if spec.secret_name not in owned_elsewhere\n+        ]\n+\n     def _strip_conflicting_env(self, env: dict[str, str]) -> None:\n         \"\"\"Remove env vars that would defeat this provider's own credential.\n \n@@ -2620,7 +2656,7 @@ def _strip_conflicting_env(self, env: dict[str, str]) -> None:\n     def _materialise_file_secrets(\n         self, state: ConversationState, env: dict[str, str]\n     ) -> None:\n-        for spec in self.acp_file_secrets:\n+        for spec in self._active_file_secrets():\n             name = spec.secret_name\n             with self._file_credential_lock:\n                 replace_existing = (\n@@ -3096,7 +3132,7 @@ async def _init() -> tuple[\n                         or detect_acp_provider_by_agent_name(agent_name)\n                     )\n                     configured = _preconfigured_credentials(\n-                        auth_provider, self.acp_file_secrets, env\n+                        auth_provider, self._active_file_secrets(), env\n                     )\n                     if configured:\n                         logger.info("
+    },
+    {
+      "sha": "00ea8b0f3b5ad79ff806f476e0b203a2adad944f",
+      "filename": "tests/sdk/agent/test_acp_agent.py",
+      "status": "modified",
+      "additions": 165,
+      "deletions": 0,
+      "changes": 165,
+      "blob_url": "https://github.com/OpenHands/software-agent-sdk/blob/57f5cc9f4a671fe290783551ba00d57efe2017c9/tests%2Fsdk%2Fagent%2Ftest_acp_agent.py",
+      "raw_url": "https://github.com/OpenHands/software-agent-sdk/raw/57f5cc9f4a671fe290783551ba00d57efe2017c9/tests%2Fsdk%2Fagent%2Ftest_acp_agent.py",
+      "contents_url": "https://api.github.com/repos/OpenHands/software-agent-sdk/contents/tests%2Fsdk%2Fagent%2Ftest_acp_agent.py?ref=57f5cc9f4a671fe290783551ba00d57efe2017c9",
+      "patch": "@@ -9451,6 +9451,171 @@ def test_settings_pass_file_secrets_through_create_agent(self):\n         }\n \n \n+class TestACPFileSecretProviderScoping:\n+    \"\"\"``acp_file_secrets`` defaults to the union across every registered\n+    provider, but only the running provider's specs apply (#4923). Without the\n+    scoping, registering a harness upstream changes how an unrelated provider's\n+    conversation treats a secret carrying the new reserved name.\n+    \"\"\"\n+\n+    _H = TestACPFileSecretMaterialisation\n+\n+    @staticmethod\n+    def _names(agent):\n+        return {spec.secret_name for spec in agent._active_file_secrets()}\n+\n+    @pytest.mark.parametrize(\n+        \"acp_server,expected\",\n+        [\n+            (\"claude-code\", set()),\n+            (\"codex\", {\"CODEX_AUTH_JSON\"}),\n+            (\"gemini-cli\", {\"GOOGLE_APPLICATION_CREDENTIALS_JSON\"}),\n+            (\"kimi-code\", {\"KIMI_CODE_CONFIG_TOML\"}),\n+            (\"pi\", {\"PI_AUTH_JSON\"}),\n+            (\"opencode\", set()),\n+        ],\n+    )\n+    def test_scopes_to_the_running_provider(self, acp_server, expected):\n+        agent = _make_agent(acp_server=acp_server)\n+        assert self._names(agent) == expected\n+\n+    def test_no_provider_claims_another_providers_reserved_secret(self):\n+        \"\"\"The property the scoping exists to hold, asserted over the registry\n+        so a provider added upstream is covered without editing this test.\"\"\"\n+        from openhands.sdk.settings.acp_providers import ACP_PROVIDERS\n+\n+        for key, info in ACP_PROVIDERS.items():\n+            others = {\n+                spec.secret_name\n+                for other, other_info in ACP_PROVIDERS.items()\n+                if other != key\n+                for spec in other_info.file_secrets\n+            } - {spec.secret_name for spec in info.file_secrets}\n+            assert self._names(_make_agent(acp_server=key)).isdisjoint(others)\n+\n+    def test_unrecognised_server_keeps_the_union(self):\n+        \"\"\"No identity means we cannot tell whose credential a reserved name\n+        belongs to, so stay conservative — as ``_strip_conflicting_env`` does.\"\"\"\n+        from openhands.sdk.settings.acp_providers import default_acp_file_secrets\n+\n+        agent = ACPAgent(acp_command=[\"some-unknown-acp-server\"])\n+        assert self._names(agent) == {\n+            spec.secret_name for spec in default_acp_file_secrets()\n+        }\n+\n+    def test_custom_command_resolves_the_provider_from_the_command(self):\n+        agent = ACPAgent(acp_command=[\"codex-acp\"])\n+        assert self._names(agent) == {\"CODEX_AUTH_JSON\"}\n+\n+    def test_specs_outside_the_registry_always_apply(self):\n+        \"\"\"A downstream CLI's spec is owned by no registered provider, so it is\n+        never filtered out — whichever harness the conversation runs.\"\"\"\n+        from openhands.sdk import ACPFileSecretSpec\n+\n+        custom = ACPFileSecretSpec(\n+            secret_name=\"MYCLI_TOKEN_JSON\",\n+            filename=\"token.json\",\n+            env_var=\"MYCLI_HOME\",\n+            subdir=\"mycli\",\n+        )\n+        agent = _make_agent(acp_server=\"codex\", acp_file_secrets=[custom])\n+        assert self._names(agent) == {\"MYCLI_TOKEN_JSON\"}\n+\n+        from openhands.sdk.settings.acp_providers import default_acp_file_secrets\n+\n+        agent = _make_agent(\n+            acp_server=\"codex\",\n+            acp_file_secrets=[custom, *default_acp_file_secrets()],\n+        )\n+        assert self._names(agent) == {\"MYCLI_TOKEN_JSON\", \"CODEX_AUTH_JSON\"}\n+\n+    def test_a_list_persisted_before_a_provider_was_added_still_scopes(self):\n+        \"\"\"The upgrade case. A conversation written when the registry held only\n+        Codex and Gemini carries that two-spec list; resumed on a newer SDK it\n+        must still scope, which a comparison against today's default could not\n+        do — the stored list no longer equals it.\n+        \"\"\"\n+        from openhands.sdk.settings.acp_providers import ACP_PROVIDERS\n+\n+        pre_upgrade = [\n+            *ACP_PROVIDERS[\"codex\"].file_secrets,\n+            *ACP_PROVIDERS[\"gemini-cli\"].file_secrets,\n+        ]\n+        agent = _make_agent(acp_server=\"claude-code\", acp_file_secrets=pre_upgrade)\n+        assert self._names(agent) == set()\n+\n+        agent = _make_agent(acp_server=\"codex\", acp_file_secrets=pre_upgrade)\n+        assert self._names(agent) == {\"CODEX_AUTH_JSON\"}\n+\n+    def test_a_name_several_providers_share_is_kept(self):\n+        \"\"\"``owned_elsewhere`` subtracts the running provider's own names, so a\n+        spec two providers both claim is not filtered from either.\"\"\"\n+        from openhands.sdk import ACPFileSecretSpec\n+\n+        shared = ACPFileSecretSpec(\n+            secret_name=\"GOOGLE_APPLICATION_CREDENTIALS_JSON\",\n+            filename=\"gcloud-credentials.json\",\n+            env_var=\"GOOGLE_APPLICATION_CREDENTIALS\",\n+            subdir=\"gemini-cli\",\n+        )\n+        agent = _make_agent(acp_server=\"gemini-cli\", acp_file_secrets=[shared])\n+        assert self._names(agent) == {\"GOOGLE_APPLICATION_CREDENTIALS_JSON\"}\n+\n+    def test_empty_specs_stay_empty(self):\n+        agent = _make_agent(acp_server=\"codex\", acp_file_secrets=[])\n+        assert self._names(agent) == set()\n+\n+    def test_scoping_survives_a_serialization_round_trip(self):\n+        \"\"\"A resumed conversation must scope too — including one written by an\n+        older SDK, which ``test_a_list_persisted_before_a_provider_was_added_\n+        still_scopes`` covers.\"\"\"\n+        agent = _make_agent(acp_server=\"claude-code\")\n+        restored = ACPAgent.model_validate(agent.model_dump())\n+        assert self._names(restored) == set()\n+\n+    def test_other_providers_blob_stays_a_plain_env_var(self, tmp_path):\n+        \"\"\"End to end through ``_start_acp_server``: on a claude-code\n+        conversation ``PI_AUTH_JSON`` is delivered as an ordinary env var, not\n+        materialised to disk with ``PI_CODING_AGENT_DIR`` set.\"\"\"\n+        from openhands.sdk.secret import StaticSecret\n+\n+        agent = _make_agent(acp_server=\"claude-code\")\n+        state = self._H._state(tmp_path)\n+        state.secret_registry.update_secrets(\n+            {\"PI_AUTH_JSON\": StaticSecret(value=SecretStr(\"blob\"))}\n+        )\n+\n+        with patch.dict(\"os.environ\", {}, clear=True):\n+            env = self._H._run_start(\n+                agent, state, conn=self._H._make_conn(agent_name=\"claude-agent-acp\")\n+            )\n+\n+        assert env.get(\"PI_AUTH_JSON\") == \"blob\"\n+        assert \"PI_CODING_AGENT_DIR\" not in env\n+        assert not (agent._acp_file_secret_dir(state, \"pi\") / \"auth.json\").exists()\n+\n+    def test_own_blob_still_materialises(self, tmp_path):\n+        \"\"\"The counterpart: on a pi conversation the same secret is written to\n+        disk and the data-dir var points at it.\"\"\"\n+        from openhands.sdk.secret import StaticSecret\n+\n+        agent = _make_agent(acp_server=\"pi\")\n+        state = self._H._state(tmp_path)\n+        state.secret_registry.update_secrets(\n+            {\"PI_AUTH_JSON\": StaticSecret(value=SecretStr(\"blob\"))}\n+        )\n+\n+        with patch.dict(\"os.environ\", {}, clear=True):\n+            env = self._H._run_start(\n+                agent, state, conn=self._H._make_conn(agent_name=\"pi-acp\")\n+            )\n+\n+        target = agent._acp_file_secret_dir(state, \"pi\") / \"auth.json\"\n+        assert target.read_text() == \"blob\"\n+        assert env.get(\"PI_CODING_AGENT_DIR\") == str(target.parent)\n+        assert \"PI_AUTH_JSON\" not in env\n+\n+\n # ---------------------------------------------------------------------------\n # Per-conversation CLI data-dir isolation (issue #1019)\n # ---------------------------------------------------------------------------"
+    }
+  ]
+}

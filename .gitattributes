@@ -1,0 +1,32 @@
+# Shell scripts run on Linux pods: always LF (the Windows working copy would otherwise ship CRLF and break `set -o pipefail`).
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+# model pin lists: their own sha256 is the manifest's pins.model.hash, so a CRLF checkout would break the pin (freeze-6)
+*.sha256 text eol=lf
+*.ts text eol=lf
+*.mjs text eol=lf
+# run bundles are byte-exact evidence (results.json is hashed into the signed manifest): never convert line endings
+benchmarks/runs/** text eol=lf
+# retrieved documents are preserved exactly as fetched, and retrieved.sha256 records their bytes (attempt 3 freeze-8): git never
+# converts them in either direction, so no core.autocrlf checkout rewrites a page or a licence into bytes nobody retrieved
+targets/evidence/** -text
+# anchor receipts and RFC 3161 tokens are kept exactly as the log and the TSA returned them, and docs/ANCHORS.md records
+# their bytes: no line-ending conversion in either direction (attempt 3, §23)
+benchmarks/anchors/** -text
+# evidence-sourcing audit records and their corrections sit beside each attempt 3 bundle; the corrections and reports cite
+# each record's sha256, so git stores them byte-exact and never converts their line endings (attempt 3, 2026-09-16)
+benchmarks/runs/*.evidence-audit.json -text
+benchmarks/runs/*.evidence-audit.correction.json -text
+# post-signature records beside each attempt 3 bundle (pass-sample review, re-decision) are anchored by their bytes
+# (founder ruling 2026-09-16): stored byte-exact, never converted
+benchmarks/runs/*.pass-sample-review.json -text
+benchmarks/runs/*.redecide-after-signing.json -text
+# systemd units are read by systemd on Linux; a CRLF in a unit file is a parse error.
+packages/record/ops/*.service text eol=lf
+packages/record/ops/*.timer text eol=lf
+# C2: vendored AWS certificates and their checksums are byte-exact; SHA256SUMS is over LF bytes on every platform
+harness/aws-identity-certs/** text eol=lf

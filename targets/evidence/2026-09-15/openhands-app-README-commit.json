@@ -1,0 +1,84 @@
+[
+  {
+    "sha": "9120ff6cbbe23640f0e475661e5a9c9729cdbf1f",
+    "node_id": "C_kwDOLfkiw9oAKDkxMjBmZjZjYmJlMjM2NDBmMGU0NzU2NjFlNWE5Yzk3MjljZGJmMWY",
+    "commit": {
+      "author": {
+        "name": "openhands-release-bot[bot]",
+        "email": "290150379+openhands-release-bot[bot]@users.noreply.github.com",
+        "date": "2026-09-11T18:14:29Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-09-11T18:14:29Z"
+      },
+      "message": "chore(main): release 1.18.0 (#17243)\n\nCo-authored-by: openhands-release-bot[bot] <290150379+openhands-release-bot[bot]@users.noreply.github.com>",
+      "tree": {
+        "sha": "580dee49c81ae0c4ec4eb4293c77e0372a8a1ff9",
+        "url": "https://api.github.com/repos/OpenHands/OpenHands/git/trees/580dee49c81ae0c4ec4eb4293c77e0372a8a1ff9"
+      },
+      "url": "https://api.github.com/repos/OpenHands/OpenHands/git/commits/9120ff6cbbe23640f0e475661e5a9c9729cdbf1f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpEUFCRC1aQ7uu5UhlAAA7IsQADe67o8sVqGDXsDO7z4UAQdv\nUDUmJRTxtYt8OEcE0kvEZcKdt8STzh7lQVZICV1lIc+Wdra4ihJeyNsBXmD4gjQD\nxxmIP8Jb9p5WCnASk7RDgFWAQh6TcS9uwysbrAanqVQpPYrWvtg9pEulNuZuovjH\nc38WjhDbL3Oj3vxJyLSd27dFbn3JTHG5o/NwAH9TpeCQ9D7yXk4Btb0k3lfPTIu4\nR7bz2a68+uf4dmQTGHMzZOfya7geztuNKFhKzUtXuImwnevIVI4JfD0BkCtwuPEb\nSSTOy16VZkCPowrML5WifEd5eh+g9C9x55pYmfYBvysOMnKxHhYWhqbJK29lpG/+\nlZFjfd+B5vYH5OZ/TcRvHRgHDAecP2f67IlOfiKy1tGtIbzQMU0sp3q/3j0aaC24\nQqnWZ0OEGY+G5ZWiovcPTDZ4ZManagmPAdt4AB+xawTEhz5Plk7q4U0/OJsNXPuh\ncIElkvdPujhaWKqsHSEluL/+ww8ur9z4rnSaWSFcmMRFqr9s7kR8GWJPqxCYKnfZ\nQetrOwhW9lz0bX6ym5fvAqvM+kwAB3IHwvnaEH+JyuvMWM0SEsfy+BIKlECKn/jc\nY4tQxpPvSQjwkkNzPPxJ/q+XPMeW5vHj3i9JPdG6x+CEY43EivzNq8pC9N/GqgiC\nvSOgjQ4jKXC37toAZFPW\n=7vNP\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 580dee49c81ae0c4ec4eb4293c77e0372a8a1ff9\nparent f920c74f6d1b2f022584d4b88779ca4ab57ce80a\nauthor openhands-release-bot[bot] <290150379+openhands-release-bot[bot]@users.noreply.github.com> 1789150469 -0300\ncommitter GitHub <noreply@github.com> 1789150469 -0300\n\nchore(main): release 1.18.0 (#17243)\n\nCo-authored-by: openhands-release-bot[bot] <290150379+openhands-release-bot[bot]@users.noreply.github.com>",
+        "verified_at": "2026-09-11T18:14:30Z"
+      }
+    },
+    "url": "https://api.github.com/repos/OpenHands/OpenHands/commits/9120ff6cbbe23640f0e475661e5a9c9729cdbf1f",
+    "html_url": "https://github.com/OpenHands/OpenHands/commit/9120ff6cbbe23640f0e475661e5a9c9729cdbf1f",
+    "comments_url": "https://api.github.com/repos/OpenHands/OpenHands/commits/9120ff6cbbe23640f0e475661e5a9c9729cdbf1f/comments",
+    "author": {
+      "login": "openhands-release-bot[bot]",
+      "id": 290150379,
+      "node_id": "BOT_kgDOEUtX6w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225919603?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/openhands-release-bot",
+      "followers_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/openhands-release-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f920c74f6d1b2f022584d4b88779ca4ab57ce80a",
+        "url": "https://api.github.com/repos/OpenHands/OpenHands/commits/f920c74f6d1b2f022584d4b88779ca4ab57ce80a",
+        "html_url": "https://github.com/OpenHands/OpenHands/commit/f920c74f6d1b2f022584d4b88779ca4ab57ce80a"
+      }
+    ]
+  }
+]

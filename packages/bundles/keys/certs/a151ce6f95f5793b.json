@@ -1,0 +1,13 @@
+{
+  "cert": {
+    "schema": "mark.signing-key/1",
+    "key_id": "a151ce6f95f5793b",
+    "public_key": "38cfc9396a7d3eadf0dd16f87860cf92302aa979478d309dd5b0d557eff64f3e",
+    "purpose": "run-manifest",
+    "not_before": "2026-09-11T23:58:35.615Z",
+    "not_after": "2026-12-10T23:58:35.615Z",
+    "root_id": "747d76289bb9ba6b",
+    "notes": "development key generated locally"
+  },
+  "root_signature": "92f4845066c29551219c93ccf8a56367f6c2657b3ed8c4a273a894ef8365f1014308b7cadb0c60712710c2af6dba508d7366abb5d7f66ec9405091109df6b800"
+}

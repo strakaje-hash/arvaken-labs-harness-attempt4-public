@@ -1,0 +1,40 @@
+Arvaken Labs harness
+Copyright 2026 Arvaken
+
+This product includes software developed by Arvaken Labs, the research division of Arvaken.
+
+Code in this repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Run data and results, when they are published with this repository, are licensed under the Creative Commons
+Attribution 4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/. That covers the
+ledgers, manifests, results, traces and exported archives of the run bundles.
+
+Documents preserved under targets/evidence/ are the named projects' own documentation and licence texts, kept
+byte-exact as retrieved. They remain under their owners' terms and are not covered by the licences above.
+
+targets/evidence/2026-09-15/openhands-app-README.md is the README.md of https://github.com/OpenHands/OpenHands at
+commit 9120ff6cbbe23640f0e475661e5a9c9729cdbf1f. That repository licenses it under the MIT License; its licence
+notice, from the repository's LICENSE file at that commit, follows. The other projects' licence files are kept beside
+their documents.
+
+The MIT License (MIT)
+
+Copyright © 2025 OpenHands contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

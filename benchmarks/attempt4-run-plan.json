@@ -1,0 +1,39 @@
+{
+ "source_of_timings": "the certifying pass on 17794bf (70 practice runs, runs/attempt4-certifying-17794bf)",
+ "rate_usd_per_hour": 3.49,
+ "total_h": 21.337,
+ "total_usd": 74.47,
+ "launch_nothing_further_at_usd": 111.7,
+ "machines": {
+  "scripted": {
+   "target": "scripted",
+   "model": "Qwen/Qwen3-32B-FP8",
+   "estimate_h": 1.931,
+   "stop_at_h": 3.862
+  },
+  "langgraph-cap": {
+   "target": "langgraph-ref",
+   "model": "Qwen/Qwen3-32B-FP8",
+   "estimate_h": 4.552,
+   "stop_at_h": 9.104
+  },
+  "langgraph-small": {
+   "target": "langgraph-ref",
+   "model": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+   "estimate_h": 3.707,
+   "stop_at_h": 7.415
+  },
+  "openhands-cap": {
+   "target": "openhands-sdk",
+   "model": "Qwen/Qwen3-32B-FP8",
+   "estimate_h": 6.538,
+   "stop_at_h": 13.077
+  },
+  "openhands-small": {
+   "target": "openhands-sdk",
+   "model": "Qwen/Qwen2.5-7B-Instruct-AWQ",
+   "estimate_h": 4.608,
+   "stop_at_h": 9.217
+  }
+ }
+}

@@ -1,0 +1,73 @@
+# Enterprise deltas (Policy §3A; Layer 1 change-set B4 and B5, founder ruling 2026-09-15).
+#
+# For each open-source subject in the registry, this records what the commercial or managed edition adds that the tested
+# edition lacks, feature by feature, as of the pinned version. Each delta comes from the project's own documentation and is
+# cited to the five-part standard (Testability Ledger v2 §0.1).
+#
+# How the documents were read:
+# - every document was retrieved on the date given and preserved byte-exact under targets/evidence/2026-09-15/, with its
+#   sha256 in retrieved.sha256;
+# - each was read in its visible text, never through a summary.
+#
+# A feature that the pinned open-source edition itself provides is not a delta. For LangGraph, durable execution and
+# streaming appear in its own README at the pin.
+#
+# A generic disclaimer ("may not reflect enterprise features") is not a delta. Where no commercial edition is named in the
+# documents checked, the entry says exactly that and lists the documents. That records what those documents say, not that
+# no such edition exists.
+schema: mark.enterprise-deltas/1
+deltas:
+  langgraph:
+    subject: https://github.com/langchain-ai/langgraph
+    tested_edition: "open-source library (MIT), langgraph 1.2.11, repository commit e539ac122f41 (2026-09-09)"
+    commercial_edition: LangSmith Deployment
+    source:
+      url: https://docs.langchain.com/langsmith/deployments
+      revision: "2026-08-26T13:41:03.125Z (the page's dateModified)"
+      retrieved_at: "2026-09-15T14:33:30Z"
+      section: "LangSmith Deployment (overview)"
+      quote: "managed infrastructure agents need to run reliably in production at scale"
+      evidence: targets/evidence/2026-09-15/langsmith-deployments.html
+    features:
+      - "managed infrastructure for running agents in production; cloud deployment requires a Plus plan or above"
+      - "horizontal scaling"
+      - "hybrid deployment: a LangChain-managed control plane with Agent Servers in the customer's infrastructure"
+      - "self-hosted with control plane: requires the Enterprise plan with LangSmith Deployment enabled"
+      - "prompts and versioned contexts updated at runtime without redeploying"
+      - "LangSmith Engine: detects recurring failures in traces and diagnoses root causes"
+    not_a_delta:
+      - "durable execution and real-time streaming: listed on the page, but the open-source README at the pin lists durable execution, and streaming is part of the library"
+  openhands:
+    subject: https://github.com/OpenHands/software-agent-sdk
+    tested_edition: "open-source SDK (MIT), openhands-sdk 1.47.0, repository commit 57f5cc9f4a67 (2026-09-11)"
+    commercial_edition: OpenHands Cloud
+    commercial_edition_named_by:
+      url: https://github.com/OpenHands/OpenHands/blob/9120ff6cbbe23640f0e475661e5a9c9729cdbf1f/README.md
+      revision: "commit 9120ff6cbbe2 (2026-09-11T18:14:29Z), the last commit touching README.md at retrieval"
+      retrieved_at: "2026-09-15T14:31:50Z"
+      section: "Architecture"
+      quote: "Inside OpenHands Cloud (our commercial offering)"
+      evidence: targets/evidence/2026-09-15/openhands-app-README.md
+    source:
+      url: https://docs.openhands.dev/openhands/usage/cloud/openhands-cloud
+      revision: "2026-01-26T12:36:31.286Z (the page's dateModified)"
+      retrieved_at: "2026-09-15T14:35:03Z"
+      section: "Getting Started"
+      quote: "connect with your GitHub, GitLab or Bitbucket account"
+      evidence: targets/evidence/2026-09-15/openhands-cloud.html
+    features:
+      - "hosted service at app.all-hands.dev"
+      - "GitHub, GitLab and Bitbucket integrations"
+      - "Slack and Jira Cloud integrations"
+      - "Cloud API"
+      - "organizations: members, roles and permissions, budgets"
+    note: "The integrations, the Cloud API and the organization features are the documented sections of the OpenHands Cloud documentation on that page; the SDK at the pin documents none of them."
+  agent-governance-toolkit:
+    subject: https://github.com/microsoft/agent-governance-toolkit
+    tested_edition: "open-source toolkit (MIT), agent-governance-toolkit-core 5.0.0, repository commit 0533ceaf6c5b (2026-09-10); its README labels the releases Public Preview"
+    commercial_edition: null
+    documents_checked:
+      - "https://github.com/microsoft/agent-governance-toolkit/blob/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/README.md (retrieved 2026-09-15T14:30:14Z)"
+      - "https://github.com/microsoft/agent-governance-toolkit/blob/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/docs/specs/AGENT-HYPERVISOR-EXECUTION-CONTROL-1.0.md (retrieved 2026-09-15T14:31:50Z)"
+    features: []
+    note: "No commercial or managed edition is named in the documents checked. That records what these documents say, not that no such edition exists."

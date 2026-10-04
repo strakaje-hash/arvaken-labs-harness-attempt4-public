@@ -1,0 +1,113 @@
+{
+  "sha": "e539ac122f4126f6dd850581c1494948cf620e31",
+  "node_id": "C_kwDOKFU0ldoAKGU1MzlhYzEyMmY0MTI2ZjZkZDg1MDU4MWMxNDk0OTQ4Y2Y2MjBlMzE",
+  "commit": {
+    "author": {
+      "name": "John Kennedy",
+      "email": "65985482+jkennedyvz@users.noreply.github.com",
+      "date": "2026-09-09T07:22:43Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-09T07:22:43Z"
+    },
+    "message": "chore(deps): fix vulnerable dev dependencies (#8449)\n\n## Summary\nPatch both `js-yaml` release lines in `libs/cli/js-examples` for\nGHSA-2883-xcg3-v3hh: Jest's transitive copy to 3.15.2 and ESLint's to\n4.3.2. Updates the existing fix rather than opening a duplicate; no\nruntime dependencies added and no major-version overrides.\n\nAddresses Dependabot alerts\n[#398](https://github.com/langchain-ai/langgraph/security/dependabot/398)\nand\n[#397](https://github.com/langchain-ai/langgraph/security/dependabot/397).\nThese are real vulnerable versions in example development tooling; patch\nrather than dismiss. Alerts remain open until this reaches `main` and\nGitHub rescans.\n\n## Verification\n- [x] Yarn 1.22.22 regenerated the lockfile with lifecycle scripts\ndisabled; diff limited to the two js-yaml entries and scoped\nresolutions.\n- [x] `yarn install --frozen-lockfile --ignore-scripts --force\n--non-interactive` in `libs/cli/js-examples`.\n- [x] `yarn why js-yaml`: ESLint 4.3.2 and Jest/Istanbul 3.15.2.\n- [x] Resolved versions checked against freshly retrieved GitHub\nadvisory patched versions for both alerts.\n- [x] `yarn format:check` and `git diff --check`.\n- [ ] Build fails in unchanged `tests/graph.int.test.ts:7`: `input` is\nnot a valid update property (also recorded in the earlier PR\nverification).\n- [ ] Unit-test script fails because it uses Jest's removed\n`--testPathPattern` option; Jest requires `--testPathPatterns`.\n- [ ] Lint fails because ESLint 10 requires `eslint.config.*`, which\nthis example lacks.\n\nThe build/test/lint configuration issues are outside this scoped\ndependency patch and remain unresolved. No full test-pass claim.\n\n---------\n\nCo-authored-by: langsmith-fleet[bot] <langsmith-fleet[bot]@users.noreply.github.com>",
+    "tree": {
+      "sha": "8d853ddab66b060efd4b426680b5764e1782ad45",
+      "url": "https://api.github.com/repos/langchain-ai/langgraph/git/trees/8d853ddab66b060efd4b426680b5764e1782ad45"
+    },
+    "url": "https://api.github.com/repos/langchain-ai/langgraph/git/commits/e539ac122f4126f6dd850581c1494948cf620e31",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqoQlDCRC1aQ7uu5UhlAAAzwgQAFw4NDRJffPWo+MlQLa6befD\n+5Cyb0r0rwhcMsg8cXF47WMo9Bxo4HYR8GI2GKOStsEeNWhrkH3sBmtYp1RpQDsO\nyNuFcjdeko9rlsDUu0p4PI2TImvXZuzi/epXGeG7gw7dGT6Pq/ON8u/nP8j7Q8G3\nJNEPyz+nz5zg23yJCLY2C8bDXS+a1JJclZD/jCKGfnYHvObQ7gyFDUxJuLCfBBWs\nkZHrV1c2iurddRVJ0lFxYcE4wBC4txJatf6vy2rZI+aN1YayAO6FHo5FogDmDRPP\nowOzKx5naPgs+hsqShvq4cVsmAxt66lzlsIN/fYE9M8Fd/eTlV2LxxcdjgrR1+xI\nX9uQ2eyM9VYkxbNnNXlllc7sFBhGqC80Ge2CJlMkLUJv9YsslCbsHj2sOu6b1Avm\nvzf848jj0TNolUq5VIqpJbgANnCYgpaIcnsKGTjVpXo3DwgFKDyKLefffWXKdM8B\nYYUmdIUwPiZsO5OQhkYjIk9k+QrnnTdTlhbn6nFE6DkAr82qlaCkEhIkjexzwVsk\nO6apvyrJvFL+V532+ksBZAX9VvlqqCLWae9RtaijmnD7GFVIPM0rdgrX9sukG33X\n4lH5cyPr9ww0OhwF8xRjLF7aHDk+TXzXtpyxvklqjeN4zO3Nb2ceSES/EhxoGglF\nHcr4ID7Mbl+8+dFEUi04\n=hoRF\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 8d853ddab66b060efd4b426680b5764e1782ad45\nparent ff4529380d7e38c683e05887c1d89baf0d76cc75\nauthor John Kennedy <65985482+jkennedyvz@users.noreply.github.com> 1788938563 -0700\ncommitter GitHub <noreply@github.com> 1788938563 -0700\n\nchore(deps): fix vulnerable dev dependencies (#8449)\n\n## Summary\nPatch both `js-yaml` release lines in `libs/cli/js-examples` for\nGHSA-2883-xcg3-v3hh: Jest's transitive copy to 3.15.2 and ESLint's to\n4.3.2. Updates the existing fix rather than opening a duplicate; no\nruntime dependencies added and no major-version overrides.\n\nAddresses Dependabot alerts\n[#398](https://github.com/langchain-ai/langgraph/security/dependabot/398)\nand\n[#397](https://github.com/langchain-ai/langgraph/security/dependabot/397).\nThese are real vulnerable versions in example development tooling; patch\nrather than dismiss. Alerts remain open until this reaches `main` and\nGitHub rescans.\n\n## Verification\n- [x] Yarn 1.22.22 regenerated the lockfile with lifecycle scripts\ndisabled; diff limited to the two js-yaml entries and scoped\nresolutions.\n- [x] `yarn install --frozen-lockfile --ignore-scripts --force\n--non-interactive` in `libs/cli/js-examples`.\n- [x] `yarn why js-yaml`: ESLint 4.3.2 and Jest/Istanbul 3.15.2.\n- [x] Resolved versions checked against freshly retrieved GitHub\nadvisory patched versions for both alerts.\n- [x] `yarn format:check` and `git diff --check`.\n- [ ] Build fails in unchanged `tests/graph.int.test.ts:7`: `input` is\nnot a valid update property (also recorded in the earlier PR\nverification).\n- [ ] Unit-test script fails because it uses Jest's removed\n`--testPathPattern` option; Jest requires `--testPathPatterns`.\n- [ ] Lint fails because ESLint 10 requires `eslint.config.*`, which\nthis example lacks.\n\nThe build/test/lint configuration issues are outside this scoped\ndependency patch and remain unresolved. No full test-pass claim.\n\n---------\n\nCo-authored-by: langsmith-fleet[bot] <langsmith-fleet[bot]@users.noreply.github.com>",
+      "verified_at": "2026-09-09T07:22:43Z"
+    }
+  },
+  "url": "https://api.github.com/repos/langchain-ai/langgraph/commits/e539ac122f4126f6dd850581c1494948cf620e31",
+  "html_url": "https://github.com/langchain-ai/langgraph/commit/e539ac122f4126f6dd850581c1494948cf620e31",
+  "comments_url": "https://api.github.com/repos/langchain-ai/langgraph/commits/e539ac122f4126f6dd850581c1494948cf620e31/comments",
+  "author": {
+    "login": "jkennedyvz",
+    "id": 65985482,
+    "node_id": "MDQ6VXNlcjY1OTg1NDgy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65985482?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/jkennedyvz",
+    "html_url": "https://github.com/jkennedyvz",
+    "followers_url": "https://api.github.com/users/jkennedyvz/followers",
+    "following_url": "https://api.github.com/users/jkennedyvz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/jkennedyvz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/jkennedyvz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/jkennedyvz/subscriptions",
+    "organizations_url": "https://api.github.com/users/jkennedyvz/orgs",
+    "repos_url": "https://api.github.com/users/jkennedyvz/repos",
+    "events_url": "https://api.github.com/users/jkennedyvz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/jkennedyvz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "ff4529380d7e38c683e05887c1d89baf0d76cc75",
+      "url": "https://api.github.com/repos/langchain-ai/langgraph/commits/ff4529380d7e38c683e05887c1d89baf0d76cc75",
+      "html_url": "https://github.com/langchain-ai/langgraph/commit/ff4529380d7e38c683e05887c1d89baf0d76cc75"
+    }
+  ],
+  "stats": {
+    "total": 20,
+    "additions": 11,
+    "deletions": 9
+  },
+  "files": [
+    {
+      "sha": "9ea0bb4fbc50b772e953d3e6e44e71214dfc6855",
+      "filename": "libs/cli/js-examples/package.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1,
+      "changes": 4,
+      "blob_url": "https://github.com/langchain-ai/langgraph/blob/e539ac122f4126f6dd850581c1494948cf620e31/libs%2Fcli%2Fjs-examples%2Fpackage.json",
+      "raw_url": "https://github.com/langchain-ai/langgraph/raw/e539ac122f4126f6dd850581c1494948cf620e31/libs%2Fcli%2Fjs-examples%2Fpackage.json",
+      "contents_url": "https://api.github.com/repos/langchain-ai/langgraph/contents/libs%2Fcli%2Fjs-examples%2Fpackage.json?ref=e539ac122f4126f6dd850581c1494948cf620e31",
+      "patch": "@@ -25,7 +25,9 @@\n     \"@langchain/langgraph\": \"^1.4.13\"\n   },\n   \"resolutions\": {\n-    \"@langchain/langgraph-checkpoint\": \"1.0.4\"\n+    \"@langchain/langgraph-checkpoint\": \"1.0.4\",\n+    \"jest/**/js-yaml\": \"3.15.2\",\n+    \"@eslint/eslintrc/js-yaml\": \"4.3.2\"\n   },\n   \"devDependencies\": {\n     \"@eslint/eslintrc\": \"^3.3.6\","
+    },
+    {
+      "sha": "6c60bc4f385a62f4a59ce22fb6bb07949822e81c",
+      "filename": "libs/cli/js-examples/yarn.lock",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 8,
+      "changes": 16,
+      "blob_url": "https://github.com/langchain-ai/langgraph/blob/e539ac122f4126f6dd850581c1494948cf620e31/libs%2Fcli%2Fjs-examples%2Fyarn.lock",
+      "raw_url": "https://github.com/langchain-ai/langgraph/raw/e539ac122f4126f6dd850581c1494948cf620e31/libs%2Fcli%2Fjs-examples%2Fyarn.lock",
+      "contents_url": "https://api.github.com/repos/langchain-ai/langgraph/contents/libs%2Fcli%2Fjs-examples%2Fyarn.lock?ref=e539ac122f4126f6dd850581c1494948cf620e31",
+      "patch": "@@ -3744,18 +3744,18 @@ js-tokens@^4.0.0:\n   resolved \"https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499\"\n   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==\n \n-js-yaml@^3.13.1:\n-  version \"3.14.2\"\n-  resolved \"https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.2.tgz#77485ce1dd7f33c061fd1b16ecea23b55fcb04b0\"\n-  integrity sha512-PMSmkqxr106Xa156c2M265Z+FTrPl+oxd/rgOQy2tijQeK5TxQ43psO1ZCwhVOSdnn+RzkzlRz/eY4BgJBYVpg==\n+js-yaml@3.15.2, js-yaml@^3.13.1:\n+  version \"3.15.2\"\n+  resolved \"https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.15.2.tgz#3f83823ac6be17f570f23b2ecdef3777ff5ea364\"\n+  integrity sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==\n   dependencies:\n     argparse \"^1.0.7\"\n     esprima \"^4.0.0\"\n \n-js-yaml@^4.3.0:\n-  version \"4.3.1\"\n-  resolved \"https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.1.tgz#01216c001d67f48e2cd560d708c7af21090a3848\"\n-  integrity sha512-CY6crGq313MX8GkwvB7tzgp99vjQxY1++5y10/BKN/GUfHqWaOGQMNZkBvqSzsZKWk/ijwHlWzzkLulsGHhjWQ==\n+js-yaml@4.3.2, js-yaml@^4.3.0:\n+  version \"4.3.2\"\n+  resolved \"https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.2.tgz#8e44fb14a2643c59726bb15787b5f1512cb3d3fb\"\n+  integrity sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==\n   dependencies:\n     argparse \"^2.0.1\"\n "
+    }
+  ]
+}

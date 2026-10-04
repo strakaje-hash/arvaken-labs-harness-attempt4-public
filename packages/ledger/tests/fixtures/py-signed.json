@@ -1,0 +1,42 @@
+{
+ "root_public_key": "17cb79fb2b4120f2b1ec65e4198d6e08b28e813feb01e4a400839b85e18080ce",
+ "root_id": "6c8f8607dbe87077",
+ "purpose": "gate",
+ "at": "2026-09-10T00:00:00Z",
+ "signed": {
+  "schema": "mark.signed-object/1",
+  "object": {
+   "issued_at": "2026-09-10T00:00:00Z",
+   "gate": "ks.completeness",
+   "thresholds": {
+    "max_landed_after_halt": 0,
+    "min_replications": 20,
+    "tolerance_ms": 5.5
+   },
+   "labels": [
+    "pass",
+    "fail",
+    "informational"
+   ],
+   "note": "unicode é中 😀 \"quoted\" 1e-7",
+   "ratio": 1e-07,
+   "big": 9007199254740991
+  },
+  "signature": "ad530bae94e45e29f7987abefa0978cf57c30c3a4ffe5db04296e0ed67c16a0170d874a1750c0e2619dcbb44f2ec741bd1bf624a492702d60fd8bcf5c160750b",
+  "key_id": "b14705888f4a6839",
+  "key_cert": {
+   "cert": {
+    "schema": "mark.signing-key/1",
+    "key_id": "b14705888f4a6839",
+    "public_key": "d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48",
+    "purpose": "gate",
+    "not_before": "2026-09-01T00:00:00Z",
+    "not_after": "2026-12-01T00:00:00Z",
+    "root_id": "6c8f8607dbe87077",
+    "notes": "test fixture, not a real key"
+   },
+   "root_signature": "a1decfbc092bb7334d635e1b58c4891c000df111f611f0ae25e983e5601b7c14913fe02080b249390c2f1b3d7d7183b594ab73abc3187648df3f17b38292b608"
+  }
+ },
+ "canonical": "{\"big\":9007199254740991,\"gate\":\"ks.completeness\",\"issued_at\":\"2026-09-10T00:00:00Z\",\"labels\":[\"pass\",\"fail\",\"informational\"],\"note\":\"unicode é中 😀 \\\"quoted\\\" 1e-7\",\"ratio\":1e-7,\"thresholds\":{\"max_landed_after_halt\":0,\"min_replications\":20,\"tolerance_ms\":5.5}}"
+}

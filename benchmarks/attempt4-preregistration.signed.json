@@ -1,0 +1,29 @@
+{
+ "schema": "mark.signed-object/1",
+ "object": {
+  "schema": "mark.preregistration-signature/1",
+  "record": "benchmarks/attempt4-preregistration.md",
+  "record_sha256": "5463436405328a68b1549f6bbf4b2ee70c44c8fbef6fe858b68cccbf5e794dda",
+  "tag": "attempt4-freeze-3",
+  "commit": "d12fdee52393f4096f6d0b97ee25b87ec08a3b89",
+  "spec": "benchmarks/attempt4-agent-controls.yaml",
+  "spec_cites_record": true,
+  "signed_under": "Arvaken Labs Publication and Independence Policy 2.0, \u00a724",
+  "signed_at": "2026-09-22T21:52:46.603Z"
+ },
+ "signature": "1a798e711b74aa758a2c317f23e061c1398cb5bf5c96c0ba9c5d4606b50b8dd82962625f1093913b4b860134487e31b70999eb18ad901b39dde1cf5a879d3902",
+ "key_id": "ee7ab65d74c67291",
+ "key_cert": {
+  "cert": {
+   "schema": "mark.signing-key/1",
+   "key_id": "ee7ab65d74c67291",
+   "public_key": "5a658440a942ab30698537b1458d8f657d85f1f19282b64060b0b9a71da57ef8",
+   "purpose": "gate",
+   "not_before": "2026-09-11T22:19:19.649Z",
+   "not_after": "2027-09-12T22:19:19.649Z",
+   "root_id": "747d76289bb9ba6b",
+   "notes": "development key generated locally"
+  },
+  "root_signature": "7494a27dcc4de0b02d18887f45a5ef04e14942e75166478b31b993af13468c2220d975fdb2ced11e31a5026a38fd9829e6e80e96fba745daf95f32a7c309570f"
+ }
+}

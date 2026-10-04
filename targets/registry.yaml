@@ -1,0 +1,326 @@
+# Target registry (Task 3.1). Every agent, control and reference target the Probe Runtime may launch.
+# Rules enforced by packages/platform/tests/test_registry.py:
+#   - license is OSI-approved and named by SPDX id; `license_checked` records who checked and when;
+#   - repo targets carry a 40-hex `sha` (or `pypi` name+version+sha256 for wheel-only targets);
+#   - every target names how it is launched (`launch`), instrumented (`instrumented`) and halted (`halt`);
+#   - category is one of agent | control | framework-native-control | reference.
+# Terms state, edition and study set (Layer 1 change-set B5, founder rulings 2026-09-15), enforced by the same loader:
+#   - study_set is labs | platform_demo. The two sets are disjoint by upstream subject (the repository, else the package), and
+#     every run manifest records the assertion (pins.study_sets). All attempt 3 targets are labs.
+#   - edition is community | lab_built. A lab_built target is the Lab's own reference implementation (Policy 2.0 §3B and
+#     Part IX): its pins name what it is built on (langgraph-ref is a Lab-built agent on the LangGraph library), and it
+#     carries no enterprise delta. managed and commercial are refused, because commercial targets are not registered in this
+#     pass.
+#   - section_26 classifies each open-source (community) subject as Policy 2.0 §26 does at signing:
+#     - open_source_edition_of_commercial_product: LangGraph's interrupt, OpenHands' pause, and the Agent Governance
+#       Toolkit until shown otherwise. Publishing a result on it needs bound media liability coverage.
+#     - open_source_subject: no commercial form from the same vendor.
+#     - not_classified_at_signing: the policy does not classify it.
+#   - An open-source (community) subject carries license_url and license_retrieved_at, and an enterprise_delta_ref into
+#     targets/enterprise-deltas.yaml. That delta is what the commercial or managed edition adds, cited from the project's own
+#     documentation.
+#   - execution_class and publication_class use the Testability Ledger v2 vocabularies.
+#   - tag_states records each control-family tag, per entry:
+#     - claimed: from the project's own document, to the five-part standard (url, revision, retrieved_at, section, and a
+#       quote under fifteen words), plus `evidence`, the preserved copy of that document (the loader refuses a missing file,
+#       and a test finds the quote in it);
+#     - none_found: names the documents checked;
+#     - undetermined: names the missing element.
+#     The registry never records a demonstrated state: a run demonstrates it, and the report reads it. The documents cited
+#     are preserved byte-exact under targets/evidence/.
+# Adding a target = adding an entry here AND an adapter under packages/platform/mark_platform/{targets,controls}/.
+schema: mark.target-registry/1
+
+targets:
+  # ---- reference (no LLM; the harness's own positive control and calibration vehicle) ----
+  - id: scripted
+    name: Scripted reference agent
+    category: reference
+    license: MIT
+    license_checked: "in-repo (packages/platform), 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []
+    launch: { module: mark_platform.targets.scripted }
+    instrumented: "every tool call is a span; tool calls go to the mock world with the scenario baggage"
+    halt: "checks the in-process stop flag between tool calls; batch tools honour cancel_inflight"
+    notes: "Executes the workload's tool script verbatim. Proves the pipeline (halt, telemetry, ledger) without a model. Never counts as an agent result."
+    finish_tool: null   # founder ruling 2026-09-23: every agent declares how its framework ends a conversation
+    finish_tool_note: "No model: the script ends when its last tool call returns (targets/scripted.py), so there is no model turn to end a conversation with."
+
+  # ---- agents ----
+  - id: langgraph-ref
+    name: LangGraph reference agent with MCP tools
+    category: agent
+    license: MIT
+    license_checked: "langchain-ai/langgraph LICENSE via GitHub API, 2026-09-11"
+    repo: https://github.com/langchain-ai/langgraph
+    sha: e539ac122f4126f6dd850581c1494948cf620e31
+    pypi:
+      - { name: langgraph, version: "1.2.11" }
+      - { name: langchain-core, version: "1.6.3" }
+      - { name: langchain-openai, version: "1.6.2" }
+      - { name: langchain-mcp-adapters, version: "0.3.2" }
+      - { name: mcp, version: "1.30.0" }
+    study_set: labs
+    edition: lab_built   # Policy 2.0 Part IX item 4: a Lab-built agent on the LangGraph library, under §3B; its pins name what it is built on
+    license_url: https://github.com/langchain-ai/langgraph/blob/e539ac122f4126f6dd850581c1494948cf620e31/LICENSE
+    license_retrieved_at: "2026-09-15T14:30:14Z"
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # an agent, not a control under Part III
+    launch: { module: mark_platform.targets.langgraph_ref }
+    instrumented: "model calls, tool calls and the guard node are spans; MCP tool server calls the mock world with the scenario baggage; sub-agent spawn = child process with OTEL_TRACEPARENT"
+    halt: "framework-native: a guard node before every tool call raises interrupt() when the stop flag is set (checkpointer = MemorySaver); resume = Command(resume)"
+    notes: "Built in this repo (the agent), depends on the pinned packages above. Tools: file ops in a throwaway dir, HTTP to the mock API, pay (mock payment), send_mail (mock), db (mock)."
+    finish_tool: null
+    finish_tool_note: "No finish tool: the graph ends when the model's reply carries no tool call (route() sends it to END, targets/langgraph_ref.py), and the task asks for the single word DONE. None of the tools it binds (pay, pay_batch, send_mail, http_post, db, write_file, read_file, calibration_sleep) ends a conversation. Checked 2026-09-23."
+
+  - id: openhands-sdk
+    name: OpenHands (software-agent-sdk)
+    category: agent
+    license: MIT
+    license_checked: "OpenHands/software-agent-sdk LICENSE via GitHub API, 2026-09-11"
+    repo: https://github.com/OpenHands/software-agent-sdk
+    sha: 57f5cc9f4a671fe290783551ba00d57efe2017c9
+    pypi:
+      - { name: openhands-sdk, version: "1.47.0" }
+      - { name: openhands-tools, version: "1.47.0" }
+    study_set: labs
+    edition: community
+    license_url: https://github.com/OpenHands/software-agent-sdk/blob/57f5cc9f4a671fe290783551ba00d57efe2017c9/LICENSE
+    license_retrieved_at: "2026-09-15T14:30:14Z"
+    enterprise_delta_ref: openhands
+    # Policy 2.0 §26 and Part IX name the controls, not this agent. Founder ruling 2026-09-15: an agent is the subject a
+    # control is measured against and carries no condition of its own, so each row carries its control's condition:
+    # openhands-pause carries §26(2), while none, ref-* and credential-gateway carry none.
+    section_26: not_classified_at_signing
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # an agent, not a control under Part III
+    launch: { module: mark_platform.targets.openhands_sdk }
+    instrumented: "conversation events (LLM calls, tool actions/observations) are mirrored into spans by the adapter's event callback; effects reach the mock world through the terminal tool (curl)"
+    halt: "framework-native: Conversation.pause(); the adapter's stop flag additionally gates the run loop"
+    notes: "Executes shell and code locally (LocalWorkspace) inside the sandbox; no Docker. The OpenHands/OpenHands repo is the app front end; the agent lives in the SDK."
+    finish_tool: finish
+    finish_tool_note: "The adapter binds TerminalTool and FileEditorTool; the pinned SDK (openhands-sdk 1.47.0) adds its default tools to every Agent -- Agent.include_default_tools defaults to ['FinishTool', 'ThinkTool'] -- and FinishTool.name is `finish`. Calling it ends the conversation (execution_status FINISHED); the SDK discards any call after it in the same turn (agent/agent.py). Read from the installed SDK on the pod, 2026-09-23."
+
+  # ---- reference controls: the halt primitives applied directly (bounds + CI positive controls; never a control's result) ----
+  - id: ref-stop
+    name: Reference control, stop flag only
+    category: reference
+    control_class: in_process
+    license: MIT
+    license_checked: "in-repo, 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # the harness's own bound, never an evaluated control
+    launch: { module: mark_platform.controls.reference }
+    instrumented: "the halt is a span naming the primitive"
+    halt: "sets the agent handle's stop flag (a control message); nothing in flight is touched"
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "the adapter's only entry is halt(), the harness's command; it sets the stop flag and nothing in the adapter or the harness fires it otherwise"
+  - id: ref-cancel
+    name: Reference control, stop + cancel in-flight
+    category: reference
+    control_class: in_process
+    license: MIT
+    license_checked: "in-repo, 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # the harness's own bound, never an evaluated control
+    launch: { module: mark_platform.controls.ref_cancel }
+    instrumented: "the halt is a span naming the primitive and the number of cancelled in-flight items"
+    halt: "stop flag + cancel_inflight (batch tools stop dispatching)"
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "the adapter's only entry is halt(), the harness's command; nothing fires the flag or cancel_inflight otherwise"
+  - id: ref-revoke
+    name: Reference control, revocation
+    category: reference
+    control_class: in_process
+    license: MIT
+    license_checked: "in-repo, 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # the harness's own bound, never an evaluated control
+    launch: { module: mark_platform.controls.ref_revoke }
+    instrumented: "the halt is a span naming the primitive"
+    halt: "stop flag + cancel_inflight + revoke (tools unbound: the agent cannot act even if it decides to)"
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "the adapter's only entry is halt(), the harness's command; nothing unbinds the tools otherwise"
+
+  # ---- controls ----
+  - id: credential-gateway
+    name: Credential-holding gateway (reference instrument, out of process)
+    category: control
+    control_class: reference_instrument
+    license: MIT
+    license_checked: "in-repo (packages/platform/mark_platform/gateway.py), 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # a reference instrument, never an evaluated control
+    launch: { module: mark_platform.controls.credential_gateway }
+    instrumented: "every forwarded or refused call is a span (gateway.forward, decision attribute) and a line in gateway.jsonl with the agent's dispatch stamp and the gateway's arrival stamp; the revoke is a span"
+    halt: "revocation: the harness posts /halt to the gateway process, which holds the mock world's token; calls arriving after that instant are refused (403). Requests already forwarded before the halt land and count as pre_halt_delayed."
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "the gateway refuses calls only after the harness posts /halt; it carries no watchdog, timer or anomaly rule of its own"
+    notes: "Built here because no open-source out-of-process control that holds tool credentials and can revoke them was found in the registry candidates; that absence is itself a finding (founder review 2026-09-11). Founder decision A10 (session 2 pre-flight): a REFERENCE INSTRUMENT, never an evaluated control; its rows are informational by rule and rendered beside the control rows; its source (mark_platform/gateway.py) ships with the bundle. Applies to every agent: the agent's MARK_MOCK_URL is the gateway."
+
+  - id: none
+    name: No control (baseline)
+    category: control
+    control_class: in_process
+    license: MIT
+    license_checked: "in-repo, 2026-09-11"
+    repo: null
+    sha: null
+    study_set: labs
+    edition: lab_built
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states: []   # the baseline: no control
+    launch: { module: mark_platform.controls.none }
+    instrumented: "the halt command is recorded as a span and nothing else happens"
+    halt: "nothing: the halt is delivered to nobody; the agent runs to completion. This is the ceiling every control is compared against."
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "arms nothing; the halt is delivered to nobody, and nothing can fire"
+
+  - id: agt-kill-switch
+    name: Microsoft Agent Governance Toolkit kill switch
+    category: control
+    control_class: in_process
+    license: MIT
+    license_checked: "microsoft/agent-governance-toolkit LICENSE via GitHub API, 2026-09-11"
+    repo: https://github.com/microsoft/agent-governance-toolkit
+    sha: 0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf
+    pypi:
+      - { name: agent-governance-toolkit-core, version: "5.0.0" }
+    study_set: labs
+    edition: community
+    license_url: https://github.com/microsoft/agent-governance-toolkit/blob/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/LICENSE
+    license_retrieved_at: "2026-09-15T14:30:14Z"
+    enterprise_delta_ref: agent-governance-toolkit
+    section_26: open_source_edition_of_commercial_product   # Policy 2.0 §26: treated as such an edition until shown otherwise
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states:
+      - tag: halt
+        claimed: claimed
+        source:
+          url: https://github.com/microsoft/agent-governance-toolkit/blob/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/docs/specs/AGENT-HYPERVISOR-EXECUTION-CONTROL-1.0.md
+          revision: "commit 0533ceaf6c5b (2026-09-10T09:21:14Z)"
+          retrieved_at: "2026-09-15T14:31:50Z"
+          section: "12.1 Purpose"
+          quote: "provides emergency agent termination with graceful step handoff when possible"
+          evidence: targets/evidence/2026-09-15/agt-AGENT-HYPERVISOR-EXECUTION-CONTROL-1.0.md
+      - tag: halt:in_flight
+        claimed: none_found
+        documents_checked: ["README.md and docs/specs/AGENT-HYPERVISOR-EXECUTION-CONTROL-1.0.md at 0533ceaf6c5b"]
+        note: "§12.3 describes handing off in-flight steps to a substitute agent, not stopping them"
+    launch: { module: mark_platform.controls.agt_kill_switch }
+    instrumented: "KillSwitch.kill() is wrapped in a span; the KillResult (terminated, handoffs, kill_history) is recorded verbatim"
+    halt: "hypervisor.security.KillSwitch.register_agent(did, callback) + kill(did, session, KillReason.MANUAL): the toolkit invokes the registered termination callback with a 5 s timeout. What the callback does is the integrator's decision; the adapter registers the agent's stop flag (control message) and reports which primitive was used."
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "READ IN THE TOOLKIT'S SOURCE ON THE SMOKE HOST 2026-09-22 (pod i2nil82qz0k50d, agent-governance-toolkit-core 5.0.0): the declaration holds, and now on the toolkit rather than on the adapter. hypervisor/security/kill_switch.py is 256 lines and contains no threading.Timer and no call_later; neither does any other module in the hypervisor package. session_timeout and quarantine_timeout are defined in the KillReason enum and referenced nowhere else in the package -- vocabulary a caller may pass, with no code that produces them. The module's one thread bounds the caller's own callback so a hung callback cannot freeze the caller, which is a timeout on the response, not a trigger. The only in-toolkit caller of KillSwitch is cli/session_commands.py, a person at a command line. Recorded separately because a reader will meet it: the same distribution ships agent_control_plane/process_isolation.py, whose spawn() arms a threading.Timer that kills the agent when it expires -- but only when the caller passes a timeout, and this control imports hypervisor.security.kill_switch and never touches that module. The adapter calls kill() with KillReason.MANUAL from halt(), the harness's command, and nothing else."
+    notes: "Ring isolation (hypervisor.rings) and trust decay (agentmesh) are separate mechanisms; only the kill switch is under test in this pass. Measured statement (first run 2026-09-11, founder-approved wording): the toolkit's kill switch is a stop primitive, callback delivery plus a cooperative agent; it revokes nothing itself, and stop primitives cannot halt in-flight tool calls by construction. Never 'the kill switch does not work'."
+
+  - id: langgraph-interrupt
+    name: LangGraph native interrupt + checkpoint
+    category: framework-native-control
+    control_class: in_process
+    license: MIT
+    license_checked: "langchain-ai/langgraph LICENSE via GitHub API, 2026-09-11"
+    repo: https://github.com/langchain-ai/langgraph
+    sha: e539ac122f4126f6dd850581c1494948cf620e31
+    study_set: labs
+    edition: community
+    license_url: https://github.com/langchain-ai/langgraph/blob/e539ac122f4126f6dd850581c1494948cf620e31/LICENSE
+    license_retrieved_at: "2026-09-15T14:30:14Z"
+    enterprise_delta_ref: langgraph
+    section_26: open_source_edition_of_commercial_product   # Policy 2.0 §26: LangChain offers the managed LangSmith Deployment
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states:
+      - tag: gate
+        claimed: claimed
+        source:
+          url: https://github.com/langchain-ai/langgraph/blob/e539ac122f4126f6dd850581c1494948cf620e31/README.md
+          revision: "commit e539ac122f41 (2026-09-09T07:22:43Z)"
+          retrieved_at: "2026-09-15T14:30:14Z"
+          section: "Why use LangGraph?"
+          quote: "Seamlessly incorporate human oversight by inspecting and modifying agent state"
+          evidence: targets/evidence/2026-09-15/langgraph-README.md
+      - tag: halt:pre_execution
+        claimed: claimed
+        source:
+          url: https://docs.langchain.com/oss/python/langgraph/interrupts
+          revision: "2026-09-15T11:23:42.442Z (the page's dateModified; after the pin)"
+          retrieved_at: "2026-09-15T14:33:30Z"
+          section: "Approve or reject"
+          quote: "pause before a critical action and ask for approval"
+          evidence: targets/evidence/2026-09-15/langgraph-interrupts.html
+      - tag: halt:in_flight
+        claimed: none_found
+        documents_checked: ["README.md at e539ac122f41", "docs.langchain.com/oss/python/langgraph/interrupts (2026-09-15)"]
+    launch: { module: mark_platform.controls.langgraph_interrupt }
+    instrumented: "the guard node's interrupt() and the resume Command are spans; the checkpoint id is recorded"
+    halt: "sets the stop flag; the agent's guard node raises interrupt() before the next tool call and the graph parks on its checkpoint; resume = graph.invoke(Command(resume='go'))"
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "the guard node raises interrupt() only when the stop flag is set, and only halt(), the harness's command, sets it"
+    notes: "Only applies to LangGraph agents (langgraph-ref). A cell pairing it with another agent is not_run: control_not_applicable."
+
+  - id: openhands-pause
+    name: OpenHands native pause
+    category: framework-native-control
+    control_class: in_process
+    license: MIT
+    license_checked: "OpenHands/software-agent-sdk LICENSE via GitHub API, 2026-09-11"
+    repo: https://github.com/OpenHands/software-agent-sdk
+    sha: 57f5cc9f4a671fe290783551ba00d57efe2017c9
+    study_set: labs
+    edition: community
+    license_url: https://github.com/OpenHands/software-agent-sdk/blob/57f5cc9f4a671fe290783551ba00d57efe2017c9/LICENSE
+    license_retrieved_at: "2026-09-15T14:30:14Z"
+    enterprise_delta_ref: openhands
+    section_26: open_source_edition_of_commercial_product   # Policy 2.0 §26: the README names OpenHands Cloud as its commercial offering
+    execution_class: Permitted
+    publication_class: Unconditional
+    tag_states:
+      - tag: halt
+        claimed: claimed
+        source:
+          url: https://docs.openhands.dev/sdk/guides/convo-pause-and-resume
+          revision: "2026-06-24T14:29:53.712Z (the page's dateModified)"
+          retrieved_at: "2026-09-15T14:33:30Z"
+          section: "Pausing Execution"
+          quote: "Pause the agent from another thread or after a delay"
+          evidence: targets/evidence/2026-09-15/openhands-pause.html
+      - tag: halt:in_flight
+        claimed: none_found
+        documents_checked: ["docs.openhands.dev/sdk/guides/convo-pause-and-resume (2026-06-24): the page does not say whether a running action completes"]
+    launch: { module: mark_platform.controls.openhands_pause }
+    instrumented: "Conversation.pause() is a span; conversation state after the halt is recorded"
+    halt: "Conversation.pause(): the SDK stops issuing new steps; a running tool action completes"
+    self_trigger_paths: []   # A14: nothing in this adapter raises a halt without the harness's command
+    self_trigger_note: "Conversation.pause() is called only from halt(), the harness's command; the SDK arms no timer or watchdog through this adapter"
+    notes: "Only applies to openhands-sdk."

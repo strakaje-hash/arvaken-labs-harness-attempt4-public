@@ -1,0 +1,17 @@
+# Grafana Tempo single binary, writing to the container disk. Receives OTLP from the collector on 4417.
+server:
+  http_listen_port: 3200
+  grpc_listen_port: 9096
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: 127.0.0.1:4417
+storage:
+  trace:
+    backend: local
+    local:
+      path: /root/runs/tempo/blocks
+    wal:
+      path: /root/runs/tempo/wal

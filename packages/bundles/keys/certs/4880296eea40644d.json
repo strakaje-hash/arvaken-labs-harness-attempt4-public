@@ -1,0 +1,13 @@
+{
+  "cert": {
+    "schema": "mark.signing-key/1",
+    "key_id": "4880296eea40644d",
+    "public_key": "4408e787ce9b33dfc4e5818fa932d7fef15bcb5a0d068d47dd82ae08a4dda84b",
+    "purpose": "cloak-bundle",
+    "not_before": "2026-09-10T00:03:57.885Z",
+    "not_after": "2026-12-09T00:03:57.885Z",
+    "root_id": "747d76289bb9ba6b",
+    "notes": "development key generated locally"
+  },
+  "root_signature": "80094720620e1701f739e29c0ef3016b9bd6425d08bd28a3a9c0437a6bdf59bfd9bc20527d4c1b0ccbea1568abed9acecdf70d92f59ac0395ac9acedf8e6220b"
+}

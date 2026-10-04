@@ -1,0 +1,101 @@
+{
+  "sha": "0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf",
+  "node_id": "C_kwDORc2-K9oAKDA1MzNjZWFmNmM1YjA5NzViZmM3MWJmZjQyZjZjY2QyZDM0YzhhZGY",
+  "commit": {
+    "author": {
+      "name": "dependabot[bot]",
+      "email": "49699333+dependabot[bot]@users.noreply.github.com",
+      "date": "2026-09-10T09:21:14Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-10T09:21:14Z"
+    },
+    "message": "chore(deps-dev): Bump hono in /policy-engine/sdk/node (#3917)\n\nBumps [hono](https://github.com/honojs/hono) from 4.12.25 to 4.13.7.\n- [Release notes](https://github.com/honojs/hono/releases)\n- [Commits](https://github.com/honojs/hono/compare/v4.12.25...v4.13.7)\n\n---\nupdated-dependencies:\n- dependency-name: hono\n  dependency-version: 4.13.7\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "tree": {
+      "sha": "1ce5315351386e447db3d6ad4a9feb3daccd15bd",
+      "url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/git/trees/1ce5315351386e447db3d6ad4a9feb3daccd15bd"
+    },
+    "url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/git/commits/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqonaKCRC1aQ7uu5UhlAAAD5cQACpJDlpeMcY1CqynTPoyS1FB\ntEXOHor4SMv9Q6GylPq2jYw6NGiDpNsEaHthwSUg9IsVFAU2JGxzxRnk7Cbm82Mi\nMPk1EXYjtylm75win1R7pd1dFqV/U6/EYCZ9LUB3QJf+Ynb6UpL7ZrGxFWfvzVFB\nI+H4iI84nY97vX7HWfo4e9JxPx73NieIaFrs197FhN/IUAbrmpX+i8/Py/WXS0qF\npQnfQUEvqV6fMBN2sLvO7xwpumG6BwuHzKc9ag231KsfipIwQTBFcqQcssOixNNR\n7Fu7if6oWrM6apfZShLqz57hniWDL04fanCMKzJFXN/62mzxQY9whyyy/vJ3xfCz\nVO1Bhd25k96t+yalIw7Tt2mse1z7+UCqTZQ5+TlDm7lzUg5BhrzDDkLagCrlQulT\nL+WmH7ZawKkFVxqTzbd0ipRDL7A43AKkFYkB3W3xV5IvrWv1yEfwhRe9XHsROSyz\n+fKEb3QmenZY0wjLV1YWdSizdU3/wTgzfLojMi3nsmWkWVjB9YsYWWSfe/H/3QkP\nsQVF/5s/gZgUFootitcTYOpDbo8ajk6fKXqgBRYnkLbLDPDPxZsoe0xq8bCaKBmZ\ne1YcNYwVPRDosZu5/LSM3hNbG0GhQTWkeQB8gREvvp359IItK7pkbx/zQMnbsf15\nYU0ExCP5SPZH/kotaioR\n=fZeT\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 1ce5315351386e447db3d6ad4a9feb3daccd15bd\nparent f22628597676e7d1da266f8819bfb1ed19068156\nauthor dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> 1789032074 -0700\ncommitter GitHub <noreply@github.com> 1789032074 -0700\n\nchore(deps-dev): Bump hono in /policy-engine/sdk/node (#3917)\n\nBumps [hono](https://github.com/honojs/hono) from 4.12.25 to 4.13.7.\n- [Release notes](https://github.com/honojs/hono/releases)\n- [Commits](https://github.com/honojs/hono/compare/v4.12.25...v4.13.7)\n\n---\nupdated-dependencies:\n- dependency-name: hono\n  dependency-version: 4.13.7\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+      "verified_at": "2026-09-10T09:21:15Z"
+    }
+  },
+  "url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/commits/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf",
+  "html_url": "https://github.com/microsoft/agent-governance-toolkit/commit/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf",
+  "comments_url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/commits/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/comments",
+  "author": {
+    "login": "dependabot[bot]",
+    "id": 49699333,
+    "node_id": "MDM6Qm90NDk2OTkzMzM=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/dependabot%5Bbot%5D",
+    "html_url": "https://github.com/apps/dependabot",
+    "followers_url": "https://api.github.com/users/dependabot%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/dependabot%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/dependabot%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/dependabot%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/dependabot%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/dependabot%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/dependabot%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/dependabot%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f22628597676e7d1da266f8819bfb1ed19068156",
+      "url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/commits/f22628597676e7d1da266f8819bfb1ed19068156",
+      "html_url": "https://github.com/microsoft/agent-governance-toolkit/commit/f22628597676e7d1da266f8819bfb1ed19068156"
+    }
+  ],
+  "stats": {
+    "total": 6,
+    "additions": 3,
+    "deletions": 3
+  },
+  "files": [
+    {
+      "sha": "fb14774284dc49f2cbf98d240b780ecc409a5ab7",
+      "filename": "policy-engine/sdk/node/package-lock.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/microsoft/agent-governance-toolkit/blob/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/policy-engine%2Fsdk%2Fnode%2Fpackage-lock.json",
+      "raw_url": "https://github.com/microsoft/agent-governance-toolkit/raw/0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf/policy-engine%2Fsdk%2Fnode%2Fpackage-lock.json",
+      "contents_url": "https://api.github.com/repos/microsoft/agent-governance-toolkit/contents/policy-engine%2Fsdk%2Fnode%2Fpackage-lock.json?ref=0533ceaf6c5b0975bfc71bff42f6ccd2d34c8adf",
+      "patch": "@@ -1162,9 +1162,9 @@\n       }\n     },\n     \"node_modules/hono\": {\n-      \"version\": \"4.12.25\",\n-      \"resolved\": \"https://registry.npmjs.org/hono/-/hono-4.12.25.tgz\",\n-      \"integrity\": \"sha512-2NFaIyNVgJmBs/ecmtGzlmluTFs5cHEWGTdu0t1HBwYzoGXOL5nUQBRMXsXWla5i4KkG//QMzVP88m1+I3fdAQ==\",\n+      \"version\": \"4.13.7\",\n+      \"resolved\": \"https://registry.npmjs.org/hono/-/hono-4.13.7.tgz\",\n+      \"integrity\": \"sha512-c8/gF9ac8Y78/agExVocyLevgR+JlpNB444Py0FSX8pJoPdYUfUzRcXtYEYGwt6l19qIlVZPN5Mfsw9jFShmQQ==\",\n       \"dev\": true,\n       \"license\": \"MIT\",\n       \"optional\": true,"
+    }
+  ]
+}

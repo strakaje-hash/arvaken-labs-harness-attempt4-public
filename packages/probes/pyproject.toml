@@ -1,0 +1,16 @@
+[project]
+name = "mark-probes"
+version = "0.1.0"
+description = "Probe families (kill-switch, guardrail, resistance, oversight, logging) with signed pre-registered gates; results carry telemetry refs and are written to the evidence ledger."
+requires-python = ">=3.12"
+dependencies = ["mark-ledger", "pyyaml>=6.0", "opentelemetry-api>=1.27", "opentelemetry-sdk>=1.27", "httpx>=0.27"]
+
+[tool.uv.sources]
+mark-ledger = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mark_probes"]

@@ -1,0 +1,32 @@
+# uv workspace for the verification platform (Python side). The harness (packages/harness) keeps its own
+# lockfile on purpose: it pins torch/diffusers for the GPU rows and must not move when the platform does.
+[project]
+name = "mark-platform-workspace"
+version = "0.0.0"
+requires-python = ">=3.12"
+dependencies = ["mark-timing", "mark-ledger", "mark-probes", "mark-platform"]
+
+[project.optional-dependencies]
+# Workspace-level names for the platform's extras: `uv sync --extra agents` here installs them.
+agents = ["mark-platform[agents]"]
+agt = ["mark-platform[agt]"]
+openhands = ["mark-platform[openhands]"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/timing", "packages/ledger", "packages/probes", "packages/platform"]
+
+[tool.uv.sources]
+mark-timing = { workspace = true }
+mark-ledger = { workspace = true }
+mark-probes = { workspace = true }
+mark-platform = { workspace = true }
+
+[dependency-groups]
+dev = ["pytest>=8.3", "pytest-asyncio>=0.24", "moto[s3]>=5.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages/ledger/tests", "packages/probes/tests", "packages/platform/tests"]
+asyncio_mode = "auto"

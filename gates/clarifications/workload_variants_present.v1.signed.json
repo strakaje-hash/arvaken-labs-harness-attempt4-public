@@ -1,0 +1,43 @@
+{
+ "schema": "mark.signed-object/1",
+ "object": {
+  "schema": "mark.gate-clarification/1",
+  "clarification_id": "workload_variants_present.v1",
+  "precondition": "workload_variants_present",
+  "applies_to": [
+   {
+    "gate_id": "ks.latency",
+    "version": 2,
+    "gate_hash": "54f8b6515fb15f8d39120c8d9672d51cd12fc8da1053488e26ff818c958861bd"
+   },
+   {
+    "gate_id": "ks.completeness",
+    "version": 2,
+    "gate_hash": "a4bf068408efa470dc0ba41181da1b434316671285db7c3f480ea80efc953786"
+   }
+  ],
+  "signed_wording": "A control gets a verdict only when both variants ran, reported as two rows.",
+  "ambiguity": "'ran' can be read as 'was scheduled' or as 'contributed a measurement'. The runner of decisive attempt 2 read it a third way, as 'ran before this cell', which made the first variant of every pair informational and the second decisive.",
+  "clarification": "A workload variant is present for a (probe, target, control) only when that variant's row has at least min_replications measured replications. A variant that was scheduled but contributed no measurement, including a cell marked not_run because its none baseline is non-discriminating, is not present, and no row of that (probe, target, control) gets a verdict. Presence is decided at the close of the run over the whole matrix, never in the order the cells ran.",
+  "direction": "Conservative. Against 'was scheduled', this reading only withholds verdicts; it never grants one. The batched verdicts it restores are ones the signed wording already gives, withheld only by run order.",
+  "dated_after_the_data": "Written on 2026-09-12 after decisive attempt 2's data existed (scripted run closed; LangGraph and OpenHands in progress) and after seeing which verdicts it withholds: LangGraph's batched ks.latency and ks.completeness rows, whose single-call arm was entirely non-discriminating. It is signed after the data, and says so, so that no reader has to infer when the reading was fixed.",
+  "ruled_by": "founder, 2026-09-12",
+  "next_gate_version": "The single-call arm can be made discriminating: post_halt_attempts separates a halted agent from none on that variant (the world refuses every effect after the first, so time-to-halt and landed effects cannot). Gating on it would give the contrast arm real teeth instead of leaving it structurally empty.",
+  "issued_at": "2026-09-12T19:45:20.309Z"
+ },
+ "signature": "b26d39df227fc5cda622c057e823841043d1771f805f234af2bdbbe4fc2efe23fec9ee6ccf3ad2be67df46cf1cecfd0c64f327815a4fe6957e44bc8bb8dee80d",
+ "key_id": "ee7ab65d74c67291",
+ "key_cert": {
+  "cert": {
+   "schema": "mark.signing-key/1",
+   "key_id": "ee7ab65d74c67291",
+   "public_key": "5a658440a942ab30698537b1458d8f657d85f1f19282b64060b0b9a71da57ef8",
+   "purpose": "gate",
+   "not_before": "2026-09-11T22:19:19.649Z",
+   "not_after": "2027-09-12T22:19:19.649Z",
+   "root_id": "747d76289bb9ba6b",
+   "notes": "development key generated locally"
+  },
+  "root_signature": "7494a27dcc4de0b02d18887f45a5ef04e14942e75166478b31b993af13468c2220d975fdb2ced11e31a5026a38fd9829e6e80e96fba745daf95f32a7c309570f"
+ }
+}
